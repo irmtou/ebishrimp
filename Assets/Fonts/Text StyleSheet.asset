@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab2114bdc8544297b417dfefe9f1e410, type: 3}
+  m_Name: Text StyleSheet
+  m_EditorClassIdentifier: 
+  m_StyleList:
+  - m_Name: Normal
+    m_HashCode: -1183493901
+    m_OpeningDefinition: <link rel="stylesheet" href="https://use.typekit.net/ohe5zul.css">
+    m_ClosingDefinition: 
+    m_OpeningTagArray: 3c0000006c000000690000006e0000006b0000002000000072000000650000006c0000003d000000220000007300000074000000790000006c0000006500000073000000680000006500000065000000740000002200000020000000680000007200000065000000660000003d0000002200000068000000740000007400000070000000730000003a0000002f0000002f0000007500000073000000650000002e000000740000007900000070000000650000006b00000069000000740000002e0000006e00000065000000740000002f0000006f0000006800000065000000350000007a000000750000006c0000002e000000630000007300000073000000220000003e000000
+    m_ClosingTagArray: 
+    m_OpeningTagUnicodeArray: 
+    m_ClosingTagUnicodeArray: 
+  - m_Name: Normal
+    m_HashCode: -1183493901
+    m_OpeningDefinition: 
+    m_ClosingDefinition: 
+    m_OpeningTagArray: 
+    m_ClosingTagArray: 
+    m_OpeningTagUnicodeArray: 
+    m_ClosingTagUnicodeArray: 
