@@ -7,8 +7,9 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] private GameObject creditsView;
-    [SerializeField] private GameObject optionsView;
+    /* The following vars are only applicable to the options scene */
+    [SerializeField] private GameObject creditsView; // the empty game object associated with "credits screen"
+    [SerializeField] private GameObject optionsView; // the empty game object associated with "options screen"
     // Start is called before the first frame update
     void Start()
     {
