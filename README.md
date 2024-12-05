@@ -122,7 +122,8 @@ The heat is shrimping up\!
 Getting the shrimp show on the road  
 Shrimp happens…  
 Shrimpressive\!  
-Shrimpossible  
+Shrimpossible
+Shrimpeccable
 Genshrimp Shrimpact  
 You’re telling me a shrimp fried this rice?[^1]
 
