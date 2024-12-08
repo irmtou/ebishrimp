@@ -22,6 +22,11 @@ public class UIManager : MonoBehaviour
         
     }
     /* Methods that are called by elements of the UI */
+    public void StartGame()
+    {
+        // loads the options scene
+        SceneManager.LoadScene("SampleTiledKitchen");
+    }
     public void OpenOptions()
     {
         // loads the options scene
@@ -45,6 +50,19 @@ public class UIManager : MonoBehaviour
         {
             creditsView.SetActive(true);
             optionsView.SetActive(false); // disable options so the buttons aren't accidentally triggered
+        }
+    }
+    public void ToggleOptions()
+    {
+        //TODO: PAUSE THE GAME IN THE BACKGROUND
+        //^^ This section is dangerous because it doesn't stop anything going on in the background while the game is "paused"
+        // shows the credits if its not shown, or disables them otherwise
+        if (optionsView.activeSelf == true)
+        {
+            optionsView.SetActive(false);
+        } else 
+        {
+            optionsView.SetActive(true);
         }
     }
 
