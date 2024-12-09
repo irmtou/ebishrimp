@@ -9,7 +9,7 @@ ScriptedImporter:
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 804e1ce4c496647cfa3f1a1134187c71, type: 3}
   _removeEmptyRootObjects: 1
-  _scaleFactor: 100
+  _scaleFactor: 0.1
   _deduplicateResources: 0
   _maximumLod: 300
   _readWriteEnabled: 1
