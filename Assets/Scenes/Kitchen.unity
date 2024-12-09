@@ -257,7 +257,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1616762114326694861, guid: 669314213fd3cae4b86c5bbfb6b5dde8, type: 3}
       propertyPath: swarmRadius
-      value: 1.74
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1616762114326694861, guid: 669314213fd3cae4b86c5bbfb6b5dde8, type: 3}
       propertyPath: bobbingSpeed
@@ -604,7 +604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1616762114326694861, guid: 669314213fd3cae4b86c5bbfb6b5dde8, type: 3}
       propertyPath: swarmRadius
-      value: 1.74
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1616762114326694861, guid: 669314213fd3cae4b86c5bbfb6b5dde8, type: 3}
       propertyPath: bobbingSpeed
@@ -751,7 +751,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1616762114326694861, guid: 669314213fd3cae4b86c5bbfb6b5dde8, type: 3}
       propertyPath: swarmRadius
-      value: 1.74
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1616762114326694861, guid: 669314213fd3cae4b86c5bbfb6b5dde8, type: 3}
       propertyPath: bobbingSpeed
@@ -1192,7 +1192,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 605855005}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13526548, y: 0.0000000055365796, z: -7.558549e-10, w: 0.99080944}
+  m_LocalRotation: {x: 0.13526548, y: 0, z: 0, w: 0.99080944}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1465,8 +1465,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 639153591}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.117220774, y: 0.000000030507746, z: -0.000000003600967, w: 0.9931059}
-  m_LocalPosition: {x: 0, y: 0.00000023841858, z: 0}
+  m_LocalRotation: {x: 0.117220774, y: 0, z: 0, w: 0.9931059}
+  m_LocalPosition: {x: 0, y: -0.00000023841858, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2090,7 +2090,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1616762114326694861, guid: 669314213fd3cae4b86c5bbfb6b5dde8, type: 3}
       propertyPath: swarmRadius
-      value: 1.74
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1616762114326694861, guid: 669314213fd3cae4b86c5bbfb6b5dde8, type: 3}
       propertyPath: bobbingSpeed
@@ -2332,7 +2332,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1616762114326694861, guid: 669314213fd3cae4b86c5bbfb6b5dde8, type: 3}
       propertyPath: swarmRadius
-      value: 1.74
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1616762114326694861, guid: 669314213fd3cae4b86c5bbfb6b5dde8, type: 3}
       propertyPath: bobbingSpeed
@@ -2474,7 +2474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1616762114326694861, guid: 669314213fd3cae4b86c5bbfb6b5dde8, type: 3}
       propertyPath: swarmRadius
-      value: 1.74
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1616762114326694861, guid: 669314213fd3cae4b86c5bbfb6b5dde8, type: 3}
       propertyPath: bobbingSpeed
@@ -3212,7 +3212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1616762114326694861, guid: 669314213fd3cae4b86c5bbfb6b5dde8, type: 3}
       propertyPath: swarmRadius
-      value: 1.74
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1616762114326694861, guid: 669314213fd3cae4b86c5bbfb6b5dde8, type: 3}
       propertyPath: bobbingSpeed
@@ -3707,7 +3707,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1616762114326694861, guid: 669314213fd3cae4b86c5bbfb6b5dde8, type: 3}
       propertyPath: swarmRadius
-      value: 1.74
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1616762114326694861, guid: 669314213fd3cae4b86c5bbfb6b5dde8, type: 3}
       propertyPath: bobbingSpeed
@@ -3890,8 +3890,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2075031317}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0991851, y: 0.0000000037069214, z: -3.6949335e-10, w: 0.995069}
-  m_LocalPosition: {x: 0, y: 0.00000023841858, z: 0}
+  m_LocalRotation: {x: 0.099185094, y: 0, z: 0, w: 0.995069}
+  m_LocalPosition: {x: 0, y: -0.00000023841858, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4054,6 +4054,10 @@ PrefabInstance:
     - target: {fileID: 1766238921346102754, guid: 44f44712d06c2ab4b8f1738972990305, type: 3}
       propertyPath: turnSmoothTime
       value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766238921346102754, guid: 44f44712d06c2ab4b8f1738972990305, type: 3}
+      propertyPath: groundCheckDistance
+      value: 0.46
       objectReference: {fileID: 0}
     - target: {fileID: 6419962098808996886, guid: 44f44712d06c2ab4b8f1738972990305, type: 3}
       propertyPath: m_Enabled
