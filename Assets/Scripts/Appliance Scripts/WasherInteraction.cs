@@ -6,8 +6,7 @@ public class WasherInteraction : MonoBehaviour
 {
     private Animator animator; // Reference to the Animator component
     public bool isPlayerNear = false; // To track if the player is near the washer
-    private bool isDoorOpen = false; // To track the washer door state
-    [SerializeField] private GameObject promptMessage; // the press e to interact message that pops up
+    private bool isDoorOpen = false; // To track the washer door state    
     void Start()
     {
         animator = GetComponent<Animator>(); // Get the Animator component

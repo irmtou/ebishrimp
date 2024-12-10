@@ -10,8 +10,11 @@ public class KrillinIndicator : MonoBehaviour
     public DryerInteraction dryerCenter;
     public DryerInteraction dryerCounter;
     public WasherInteraction washerCenter;
-    public StovetopInteraction stoveTop1;
-    public StovetopInteraction stoveTop2;
+    public ApplianceInteraction stoveTop1;
+    public ApplianceInteraction stoveTop2;
+    public ApplianceInteraction cutBoard1;
+    public ApplianceInteraction cutBoard2;
+    public ApplianceInteraction mixer;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,12 +24,20 @@ public class KrillinIndicator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if (airFryer.isPlayerNear 
+       promptInteraction();
+    }
+
+    public void promptInteraction()
+    {
+        if (airFryer.isPlayerNear 
         || dryerCenter.isPlayerNear
         || dryerCounter.isPlayerNear
         || washerCenter.isPlayerNear
         || stoveTop1.isPlayerNear
         || stoveTop2.isPlayerNear
+        || cutBoard1.isPlayerNear
+        || cutBoard2.isPlayerNear
+        || mixer.isPlayerNear
             )
             {
                 promptMessage.gameObject.SetActive(true);
@@ -35,15 +46,6 @@ public class KrillinIndicator : MonoBehaviour
             {
                 promptMessage.gameObject.SetActive(false);
             }
-    }
-
-    public void promptInteraction()
-    {
-        if (promptMessage) // will do nothing if there is no prompt message in the scene
-        {
-            
-            promptMessage.gameObject.SetActive(true);
-        }
     }
 
 

@@ -9,7 +9,6 @@ public class AirFryerInteraction : MonoBehaviour
     private bool isTrayOpen = false; // To track the air fryer tray state
     private bool isTrayClosed = true; // To ensure the tray is closed before running
     private bool isPlayerInside = false; // To track if the player is inside the air fryer
-    [SerializeField] private GameObject promptMessage; // the press e to interact message that pops up
     void Start()
     {
         animator = GetComponent<Animator>();

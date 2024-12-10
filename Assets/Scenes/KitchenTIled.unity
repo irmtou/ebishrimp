@@ -1204,6 +1204,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2299836384993933847, guid: f6441423862678848abbe40b9e041c96, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1459638428}
+    - targetCorrespondingSourceObject: {fileID: 2299836384993933847, guid: f6441423862678848abbe40b9e041c96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1459638430}
     - targetCorrespondingSourceObject: {fileID: 8078803693289664108, guid: f6441423862678848abbe40b9e041c96, type: 3}
       insertIndex: -1
       addedObject: {fileID: 358054939}
@@ -1306,6 +1309,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2746604231647367199, guid: b6ca88727e64b0243a5c23375713c170, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1407443403}
+    - targetCorrespondingSourceObject: {fileID: 1260742472364702779, guid: b6ca88727e64b0243a5c23375713c170, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 200355159}
     - targetCorrespondingSourceObject: {fileID: 9211611835897018591, guid: b6ca88727e64b0243a5c23375713c170, type: 3}
       insertIndex: -1
       addedObject: {fileID: 326708151}
@@ -1315,6 +1321,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3356497641215644939, guid: b6ca88727e64b0243a5c23375713c170, type: 3}
   m_PrefabInstance: {fileID: 200355156}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &200355158 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1260742472364702779, guid: b6ca88727e64b0243a5c23375713c170, type: 3}
+  m_PrefabInstance: {fileID: 200355156}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &200355159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200355158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrimpCount: 3
+  chef: {fileID: 3141613144764604248}
+  isPlayerNear: 0
+  currentlyCooking: 0
+  animationClip: {fileID: 0}
 --- !u!1 &201899618
 GameObject:
   m_ObjectHideFlags: 0
@@ -1476,6 +1504,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7312392789310920611, guid: 8d468adc2cff63f42b13ce4caf03c1d7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 853362534}
+    - targetCorrespondingSourceObject: {fileID: 7312392789310920611, guid: 8d468adc2cff63f42b13ce4caf03c1d7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 853362536}
   m_SourcePrefab: {fileID: 100100000, guid: 8d468adc2cff63f42b13ce4caf03c1d7, type: 3}
 --- !u!4 &219716115 stripped
 Transform:
@@ -2754,6 +2785,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6276527684664871112, guid: 12b1930f71aa0f145aa90da57d72f874, type: 3}
       insertIndex: -1
       addedObject: {fileID: 786697280}
+    - targetCorrespondingSourceObject: {fileID: 6276527684664871112, guid: 12b1930f71aa0f145aa90da57d72f874, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 786697284}
     - targetCorrespondingSourceObject: {fileID: 1199694430169837425, guid: 12b1930f71aa0f145aa90da57d72f874, type: 3}
       insertIndex: -1
       addedObject: {fileID: 139420554}
@@ -2849,6 +2883,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1039319326416491012, guid: 503cef75e5e72244ba9710eb6f271132, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1984985048}
+    - targetCorrespondingSourceObject: {fileID: 1039319326416491012, guid: 503cef75e5e72244ba9710eb6f271132, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1984985050}
   m_SourcePrefab: {fileID: 100100000, guid: 503cef75e5e72244ba9710eb6f271132, type: 3}
 --- !u!4 &517996771 stripped
 Transform:
@@ -2968,7 +3005,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 525239419}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5dbd03b100ded0e4e90aff766a66c6ca, type: 3}
   m_Name: 
@@ -2976,6 +3013,23 @@ MonoBehaviour:
   damagePerSecond: 10
   isPlayerNear: 0
   promptMessage: {fileID: 1049578614}
+--- !u!114 &525239426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525239419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrimpCount: 3
+  chef: {fileID: 3141613144764604248}
+  isPlayerNear: 0
+  currentlyCooking: 0
+  animationClip: {fileID: 0}
 --- !u!1 &541800812
 GameObject:
   m_ObjectHideFlags: 0
@@ -3965,6 +4019,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1048367462581851420, guid: 60d8bc2b8b69961468eef2b1cf70334a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1823946043}
+    - targetCorrespondingSourceObject: {fileID: 1048367462581851420, guid: 60d8bc2b8b69961468eef2b1cf70334a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1823946045}
     - targetCorrespondingSourceObject: {fileID: 2539435406895911246, guid: 60d8bc2b8b69961468eef2b1cf70334a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 203435280}
@@ -4049,13 +4106,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 786697278}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9fb3116e8b718bd4d9a25edadb494e96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayerNear: 0
-  promptMessage: {fileID: 1049578614}
 --- !u!65 &786697281
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4121,6 +4177,23 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4468429844926704506, guid: 8b5c6df027335f643a26ec88baebf5d5, type: 3}
+--- !u!114 &786697284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786697278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrimpCount: 3
+  chef: {fileID: 3141613144764604248}
+  isPlayerNear: 0
+  currentlyCooking: 0
+  animationClip: {fileID: 0}
 --- !u!1 &839636840
 GameObject:
   m_ObjectHideFlags: 3
@@ -4415,7 +4488,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 853362529}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5dbd03b100ded0e4e90aff766a66c6ca, type: 3}
   m_Name: 
@@ -4444,6 +4517,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.016376, y: 0.6174172, z: 2.101934}
   m_Center: {x: -0.4296094, y: 0.059937447, z: -0.03468585}
+--- !u!114 &853362536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853362529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrimpCount: 3
+  chef: {fileID: 3141613144764604248}
+  isPlayerNear: 0
+  currentlyCooking: 0
+  animationClip: {fileID: 0}
 --- !u!1001 &855227350
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4529,12 +4619,18 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2461224206544761026, guid: 8d468adc2cff63f42b13ce4caf03c1d7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 855227355}
+    - targetCorrespondingSourceObject: {fileID: 2461224206544761026, guid: 8d468adc2cff63f42b13ce4caf03c1d7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 855227356}
     - targetCorrespondingSourceObject: {fileID: 7312392789310920611, guid: 8d468adc2cff63f42b13ce4caf03c1d7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 525239424}
     - targetCorrespondingSourceObject: {fileID: 7312392789310920611, guid: 8d468adc2cff63f42b13ce4caf03c1d7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 525239425}
+    - targetCorrespondingSourceObject: {fileID: 7312392789310920611, guid: 8d468adc2cff63f42b13ce4caf03c1d7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 525239426}
   m_SourcePrefab: {fileID: 100100000, guid: 8d468adc2cff63f42b13ce4caf03c1d7, type: 3}
 --- !u!4 &855227351 stripped
 Transform:
@@ -4584,6 +4680,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.1024997, y: 1.8801374, z: 2.3307052}
   m_Center: {x: -0.4296893, y: -0.1283412, z: -0.38498282}
+--- !u!114 &855227356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552158241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrimpCount: 3
+  chef: {fileID: 3141613144764604248}
+  isPlayerNear: 0
+  currentlyCooking: 0
+  animationClip: {fileID: 0}
 --- !u!1001 &881179290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6522,8 +6635,25 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.1109414, y: 0.6035948, z: 2.2851355}
-  m_Center: {x: 0.0021936297, y: 1.4327216, z: -0.06538594}
+  m_Size: {x: 1.0321809, y: 0.61916703, z: 1.1958398}
+  m_Center: {x: 0.0037779096, y: 0.11719823, z: -0.10893875}
+--- !u!114 &1114992854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114992849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrimpCount: 2
+  chef: {fileID: 3141613144764604248}
+  isPlayerNear: 0
+  currentlyCooking: 0
+  animationClip: {fileID: 0}
 --- !u!1001 &1123084050
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6613,6 +6743,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5894026827205955742, guid: 06d8e92ddcc65204d91c3529292b28f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1911181059}
+    - targetCorrespondingSourceObject: {fileID: 5894026827205955742, guid: 06d8e92ddcc65204d91c3529292b28f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1911181060}
   m_SourcePrefab: {fileID: 100100000, guid: 06d8e92ddcc65204d91c3529292b28f0, type: 3}
 --- !u!4 &1123084051 stripped
 Transform:
@@ -7978,6 +8111,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7790462712066949822, guid: 21c984f960c4be7489c74070d73c29f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1614707684}
+    - targetCorrespondingSourceObject: {fileID: 7790462712066949822, guid: 21c984f960c4be7489c74070d73c29f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1614707685}
     - targetCorrespondingSourceObject: {fileID: 4613009798226218326, guid: 21c984f960c4be7489c74070d73c29f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 844334147}
@@ -8286,6 +8422,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5894026827205955742, guid: 06d8e92ddcc65204d91c3529292b28f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1114992853}
+    - targetCorrespondingSourceObject: {fileID: 5894026827205955742, guid: 06d8e92ddcc65204d91c3529292b28f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1114992854}
   m_SourcePrefab: {fileID: 100100000, guid: 06d8e92ddcc65204d91c3529292b28f0, type: 3}
 --- !u!4 &1326794355 stripped
 Transform:
@@ -9333,7 +9472,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459638426}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac58d8e0f54401646808b7ee40c757f4, type: 3}
   m_Name: 
@@ -9361,6 +9500,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.8464967, y: 1.1317945, z: 1.3473158}
   m_Center: {x: -0.07831349, y: -0.1307656, z: 0.029935896}
+--- !u!114 &1459638430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459638426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrimpCount: 3
+  chef: {fileID: 3141613144764604248}
+  isPlayerNear: 0
+  currentlyCooking: 0
+  animationClip: {fileID: 0}
 --- !u!1001 &1495514866
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9887,6 +10043,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 6.1254363, y: 1.5910962, z: 7.19306}
   m_Center: {x: -0.24387568, y: 0.29554808, z: -0.25044844}
+--- !u!114 &1614707685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614707679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrimpCount: 3
+  chef: {fileID: 3141613144764604248}
+  isPlayerNear: 0
+  currentlyCooking: 0
+  animationClip: {fileID: 0}
 --- !u!1 &1628321693 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2972110767281291512, guid: 952c53b1e5c4dca429dd42710d428ddf, type: 3}
@@ -10536,13 +10709,29 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823946039}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7bafe52daa75a4489c37d2f27872c94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayerNear: 0
-  promptMessage: {fileID: 1049578614}
+--- !u!114 &1823946045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823946039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrimpCount: 3
+  chef: {fileID: 3141613144764604248}
+  isPlayerNear: 0
+  currentlyCooking: 0
+  animationClip: {fileID: 0}
 --- !u!1 &1836575204 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8134468839870442918, guid: 06d8e92ddcc65204d91c3529292b28f0, type: 3}
@@ -10805,6 +10994,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.1913898, y: 0.6174172, z: 1.1138417}
   m_Center: {x: -0.018995974, y: 0.05993746, z: 0.09169925}
+--- !u!114 &1911181060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911181055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrimpCount: 3
+  chef: {fileID: 3141613144764604248}
+  isPlayerNear: 0
+  currentlyCooking: 0
+  animationClip: {fileID: 0}
 --- !u!1 &1917328375 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7922661827993084233, guid: 60d8bc2b8b69961468eef2b1cf70334a, type: 3}
@@ -11498,13 +11704,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984985044}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac58d8e0f54401646808b7ee40c757f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayerNear: 0
   promptMessage: {fileID: 1049578614}
+--- !u!114 &1984985050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984985044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrimpCount: 3
+  chef: {fileID: 3141613144764604248}
+  isPlayerNear: 0
+  currentlyCooking: 0
+  animationClip: {fileID: 0}
 --- !u!1 &2000056906
 GameObject:
   m_ObjectHideFlags: 3
@@ -12160,8 +12383,11 @@ MonoBehaviour:
   dryerCenter: {fileID: 1459638428}
   dryerCounter: {fileID: 1984985049}
   washerCenter: {fileID: 786697280}
-  stoveTop1: {fileID: 853362534}
-  stoveTop2: {fileID: 525239425}
+  stoveTop1: {fileID: 853362536}
+  stoveTop2: {fileID: 525239426}
+  cutBoard1: {fileID: 1114992854}
+  cutBoard2: {fileID: 1911181060}
+  mixer: {fileID: 1614707685}
 --- !u!4 &2083866036
 Transform:
   m_ObjectHideFlags: 0
@@ -12654,19 +12880,47 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1397205176079635718, guid: a885ce239264db54b8ef2bac834bea67, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3141613144764604248}
   m_SourcePrefab: {fileID: 100100000, guid: a885ce239264db54b8ef2bac834bea67, type: 3}
 --- !u!114 &3141613144764604246 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2544534110909258051, guid: a885ce239264db54b8ef2bac834bea67, type: 3}
   m_PrefabInstance: {fileID: 3141613144764604245}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 3141613144764604247}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b98626225d30fa747ac6bbe9e22942ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &3141613144764604247 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1397205176079635718, guid: a885ce239264db54b8ef2bac834bea67, type: 3}
+  m_PrefabInstance: {fileID: 3141613144764604245}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3141613144764604248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3141613144764604247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c28610a2239b724ca8ae905a2c1649e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxShrimpCapacity: 5
+  cookingTimePerShrimp: 3
+  shrimpInsertPoint: {fileID: 0}
+  shrimpManager: {fileID: 3141613144764604246}
+  interactionRadius: 3
+  shrimpLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

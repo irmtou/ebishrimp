@@ -7,7 +7,6 @@ public class MicrowaveInteraction : MonoBehaviour
     private Animator animator; // Reference to the Animator component
     public bool isPlayerNear = false; // To track if the player is near the microwave
     private bool isDoorOpen = false; // To track the microwave door state
-    [SerializeField] private GameObject promptMessage; // the press e to interact message that pops up
     void Start()
     {
         animator = GetComponent<Animator>(); // Get the Animator component attached to the microwave

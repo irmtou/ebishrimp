@@ -16,14 +16,11 @@ public class CookingAppliance : MonoBehaviour {
     private bool isCooking = false; // Whether the appliance is currently cooking shrimp
 
     void Update() {
-        // This can probably be replaced with Gio/Cameron's code
-        if (Input.GetKeyDown(KeyCode.F)) {
-            DepositShrimp();
-        }
+        // Replacing this with a call from appliance interaction code - Gio
     }
 
 
-    void DepositShrimp() {
+    public void DepositShrimp() {
         Collider[] nearbyShrimp = Physics.OverlapSphere(transform.position, interactionRadius, shrimpLayer);
 
         if (shrimpInAppliance.Count >= maxShrimpCapacity) {
