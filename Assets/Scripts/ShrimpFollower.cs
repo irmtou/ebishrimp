@@ -7,13 +7,13 @@ public class ShrimpSwarm : MonoBehaviour {
 
     [Header("Movement Settings")]
     public float moveSpeed = 3f; // Base movement speed
-    public float driftSpeed = 1f; // Extra drift speed for randomness
+    public float driftSpeed = .5f; // Extra drift speed for randomness
     public float positionSmoothness = 0.2f; // How quickly shrimp respond to new targets
     public float rotationSmoothness = 5f; // Speed of smooth rotation
 
     [Header("Organic Motion")]
     public float noiseFrequency = 0.5f; // How quickly noise changes direction
-    public float noiseAmplitude = 1f; // Strength of random drifting
+    public float noiseAmplitude = 0.5f; // Strength of random drifting
     public float wobbleIntensity = 0.1f; // Small rotation wobble for realism
     public float wobbleSpeed = 2f; // Speed of wobble oscillation
 

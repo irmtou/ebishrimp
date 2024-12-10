@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8079165549386547079}
   - component: {fileID: 1381255928956003944}
   - component: {fileID: 8860967987412950448}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Shrimp_LOD02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4463392450875586352}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -117,8 +117,7 @@ GameObject:
   - component: {fileID: 415180245881312884}
   - component: {fileID: 465862539909910200}
   - component: {fileID: 1766238921346102754}
-  - component: {fileID: 6419962098808996886}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: InvisibleShrimp
   m_TagString: Invisible
   m_Icon: {fileID: 0}
@@ -181,29 +180,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
   cam: {fileID: 0}
-  speed: 6
-  turnSmoothTime: 0.5
+  speed: 2.04
+  turnSmoothTime: 0.04
   gravity: -9.81
-  groundCheckDistance: 0.3
+  groundCheckDistance: 0.46
   jumpHeight: 2
---- !u!135 &6419962098808996886
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8792049075448503329}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Radius: 0.035
-  m_Center: {x: 0.345, y: -0.339, z: -0.1941328}
