@@ -55,6 +55,11 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+       ResetGame(); //Moved all of these functions to reset game so we would have a callable reset function
+    }
+
+    public void ResetGame()
+    {
         Application.targetFrameRate = 60; //We can change this
         ticking  = false;
         shrimpCount = 1;
