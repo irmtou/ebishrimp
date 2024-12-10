@@ -472,7 +472,7 @@ GameObject:
   m_Component:
   - component: {fileID: 325396969}
   m_Layer: 5
-  m_Name: Devastation
+  m_Name: KrilledIt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -921,7 +921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.77044016, g: 0.4589964, b: 0.36220375, a: 0.50980395}
+  m_Color: {r: 0.9538844, g: 1, b: 0.8666667, a: 0.50980395}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1481,6 +1481,7 @@ GameObject:
   - component: {fileID: 1368705353}
   - component: {fileID: 1368705356}
   - component: {fileID: 1368705355}
+  - component: {fileID: 1368705357}
   m_Layer: 5
   m_Name: RawImage
   m_TagString: Untagged
@@ -1520,14 +1521,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.78930813, g: 0.5522675, b: 0.5522675, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 266677e0fefd14245bfc000003f1d995, type: 3}
+  m_Texture: {fileID: 2800000, guid: a0f7b4bbd2746404a961df744c7f1760, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1542,6 +1543,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368705352}
   m_CullTransparentMesh: 1
+--- !u!95 &1368705357
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368705352}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b995aa36787e8e148a24e37442c15436, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1594179435
 GameObject:
   m_ObjectHideFlags: 0
@@ -1592,14 +1614,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.53144646, g: 0.2095293, b: 0.20305267, a: 1}
+  m_Color: {r: 0.88235295, g: 0.8235294, b: 0.9137255, a: 0.7764706}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 282c0b5bb09ebb741a3412cace6b2c28, type: 3}
+  m_Texture: {fileID: 2800000, guid: 61888473bff206244a82237988d1cb20, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -2051,7 +2073,7 @@ GameObject:
   - component: {fileID: 1892061708}
   - component: {fileID: 1892061710}
   m_Layer: 5
-  m_Name: DevastatingMessage
+  m_Name: AwesomeMessage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2096,7 +2118,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Shrimp Happens :(
+  m_text: Shrimpecable!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}

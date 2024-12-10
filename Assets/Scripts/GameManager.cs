@@ -82,13 +82,13 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         Start();
-        //SceneManager.LoadScene("Game Over");      //Uncomment if we make a Game Over screen
+        SceneManager.LoadScene("Crustacean Devastation");      // Game Over Screen (Loss)
     }
 
     private void WinScreen()
     {
         Start();
-        //SceneManager.LoadScene("Win Screen");      //Uncomment if we make a win screen 
+        SceneManager.LoadScene("KrilledIt");     // Game Over Screen (Win)
     }
 
     //adds change value to shrimpCount, can be + or -
