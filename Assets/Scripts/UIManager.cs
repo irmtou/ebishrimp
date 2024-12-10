@@ -27,6 +27,10 @@ public class UIManager : MonoBehaviour
         // loads the options scene
         GameManager.Instance.NewGame();
     }
+    public void RestartGame()
+    {
+        GameManager.Instance.ResetGame();
+    }
     public void OpenOptions()
     {
         // loads the options scene
