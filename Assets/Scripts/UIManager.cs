@@ -25,7 +25,7 @@ public class UIManager : MonoBehaviour
     public void StartGame()
     {
         // loads the options scene
-        SceneManager.LoadScene("SampleTiledKitchen");
+        GameManager.Instance.NewGame();
     }
     public void OpenOptions()
     {
@@ -60,9 +60,11 @@ public class UIManager : MonoBehaviour
         if (optionsView.activeSelf == true)
         {
             optionsView.SetActive(false);
+            GameManager.Instance.ticking = true;
         } else 
         {
             optionsView.SetActive(true);
+            GameManager.Instance.ticking = false;
         }
     }
 

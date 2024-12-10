@@ -12,20 +12,19 @@ public class GameManager : MonoBehaviour
 
     public float time{ get; private set;}
 
-    private bool ticking;
+    public bool ticking;
 
     public int shrimpCount{ get; private set;}
 
     void FixedUpdate()
     {
-        //Check if health is below zero
         if(ticking)
         {
             time = time - Time.deltaTime;
-        }
-        if(time<=0f)
-        {
-            GameOver();
+            if(time<=0f)
+            {
+                GameOver();
+            }
         }
     }
 
@@ -55,16 +54,17 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Application.targetFrameRate = 60; //We can change this
+        ticking  = false;
+        shrimpCount = 1;
+        time = 120f;
         LoadLevel("SampleScene");
     }
 
-    private void NewGame()
+    public void NewGame()
     {
         score = 0;
-        shrimpCount = 20;
-        time = 120f;
         ticking  = true;
-        LoadLevel("KitchenTlled");
+        LoadLevel("SampleTiledKitchen");
     }
 
     public void LoadLevel(string sceneName)
@@ -74,13 +74,13 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        NewGame();
+        Start();
         //SceneManager.LoadScene("Game Over");      //Uncomment if we make a Game Over screen
     }
 
     private void WinScreen()
     {
-        NewGame();
+        Start();
         //SceneManager.LoadScene("Win Screen");      //Uncomment if we make a win screen 
     }
 
