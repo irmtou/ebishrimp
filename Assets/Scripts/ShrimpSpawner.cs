@@ -12,6 +12,9 @@ public class FridgeSpawner : MonoBehaviour {
     public float spawnIntervalMax = 5f; // Maximum time between spawns
     public int shrimpBatchSize = 4; // Number of shrimp to spawn per batch
 
+    [Header("Shrimp Manager")]
+    public ShrimpManager shrimpManager; // Reference to the ShrimpManager
+
     void Start() {
         StartCoroutine(SpawnShrimpRoutine());
     }
@@ -37,6 +40,12 @@ public class FridgeSpawner : MonoBehaviour {
                     GameManager.Instance.changeShrimpCount(1);
                 }
                 yield return new WaitForSeconds(0.2f); // Delay between spawning individual shrimp
+
+                if (shrimpManager != null) {
+                    shrimpManager.shrimpTroupe.Add(shrimp);
+                }
+                // Delay between spawning individual shrimp
+                yield return new WaitForSeconds(0.2f);
             }
 
             // Wait for the remaining part of the animation (door closing)

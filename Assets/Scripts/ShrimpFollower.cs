@@ -1,6 +1,9 @@
 using UnityEngine;
 
-public class ShrimpSwarm : MonoBehaviour {
+public class ShrimpFollower : MonoBehaviour {
+    public ShrimpManager shrimpManager; // Reference to the ShrimpManager
+
+
     [Header("Leader Settings")]
     public Transform leader; // Reference to the leader
     public float swarmRadius = 3f; // Radius around the leader
