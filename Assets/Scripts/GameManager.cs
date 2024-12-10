@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance { get; private set; }
 
-    public int score{ get; private set;}
+    public int cookedShrimpCount{ get; private set;}
 
     public float time{ get; private set;}
 
@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
 
     public void NewGame()
     {
-        score = 0;
+        cookedShrimpCount = 0;
         ticking  = true;
         LoadLevel("KitchenTIled");
     }
@@ -81,25 +81,27 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        Start();
         SceneManager.LoadScene("Crustacean Devastation");      // Game Over Screen (Loss)
     }
 
     private void WinScreen()
     {
-        Start();
         SceneManager.LoadScene("KrilledIt");     // Game Over Screen (Win)
     }
 
-    //adds change value to shrimpCount, can be + or -
+    //sets shrimp count
     public void changeShrimpCount(int change)
     {
-        shrimpCount = shrimpCount + change;
+        shrimpCount = change;
         if (shrimpCount<=0)
         {
             //end game if so
             WinScreen();
         }
+    }
+    public void changeCookedShrimpCount(int change)
+    {
+        cookedShrimpCount = change;
     }
 
 

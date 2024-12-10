@@ -34,15 +34,10 @@ public class FridgeSpawner : MonoBehaviour {
             // Spawn shrimp during the animation
             for (int i = 0; i < shrimpBatchSize; i++) {
                 GameObject shrimp = Instantiate(shrimpPrefab, spawnPoint.position, Quaternion.identity);
-                
-                if(GameManager.Instance != null)
-                {
-                    GameManager.Instance.changeShrimpCount(1);
-                }
                 yield return new WaitForSeconds(0.2f); // Delay between spawning individual shrimp
 
                 if (shrimpManager != null) {
-                    shrimpManager.shrimpTroupe.Add(shrimp);
+                    shrimpManager.AddShrimpToTroupe(shrimp);
                 }
                 // Delay between spawning individual shrimp
                 yield return new WaitForSeconds(0.2f);

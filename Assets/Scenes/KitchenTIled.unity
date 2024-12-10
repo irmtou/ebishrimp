@@ -9650,7 +9650,7 @@ MonoBehaviour:
   spawnIntervalMin: 2
   spawnIntervalMax: 5
   shrimpBatchSize: 4
-  shrimpManager: {fileID: 0}
+  shrimpManager: {fileID: 3141613144764604246}
 --- !u!65 &1495514875
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12917,10 +12917,10 @@ MonoBehaviour:
   cookingTimePerShrimp: 3
   shrimpInsertPoint: {fileID: 0}
   shrimpManager: {fileID: 3141613144764604246}
-  interactionRadius: 3
+  interactionRadius: 10
   shrimpLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

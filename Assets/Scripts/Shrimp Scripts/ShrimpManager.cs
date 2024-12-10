@@ -8,6 +8,10 @@ public class ShrimpManager : MonoBehaviour {
     public void AddShrimpToTroupe(GameObject shrimp) {
         if(!shrimpTroupe.Contains(shrimp)) {
             shrimpTroupe.Add(shrimp);
+            if(GameManager.Instance!=null)
+            {
+                GameManager.Instance.changeShrimpCount(shrimpTroupe.Count);
+            }
             Debug.Log($"Shrimp added. Troupe size: {shrimpTroupe.Count}");
         }
     }
@@ -15,12 +19,20 @@ public class ShrimpManager : MonoBehaviour {
     public void RemoveShrimpFromTroupe(GameObject shrimp) {
         if (shrimpTroupe.Contains(shrimp)) {
             shrimpTroupe.Remove(shrimp);
+            if(GameManager.Instance!=null)
+            {
+                GameManager.Instance.changeShrimpCount(shrimpTroupe.Count);
+            }
             Debug.Log($"Shrimp removed. Troupe size: {shrimpTroupe.Count}");
         }
     }
 
     public void IncrementCookedShrimpCount(int count) {
         totalCookedShrimp += count;
+        if(GameManager.Instance!=null)
+        {
+            GameManager.Instance.changeCookedShrimpCount(totalCookedShrimp);
+        }
         Debug.Log($"Total Cooked Shrimp: {totalCookedShrimp}");
     }
 }
