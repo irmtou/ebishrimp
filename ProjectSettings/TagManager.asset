@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Invisible
+  - counter
+  - cooks
   layers:
   - Default
   - TransparentFX
