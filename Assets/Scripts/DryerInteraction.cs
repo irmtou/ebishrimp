@@ -5,11 +5,11 @@ using UnityEngine;
 public class DryerInteraction : MonoBehaviour
 {
     private Animator animator; // Reference to the Animator
-    private bool isPlayerNear = false; // To track if the player is near the dryer
+    public bool isPlayerNear = false; // To track if the player is near the dryer
     private bool isDoorOpen = false; // To track the door's state
     private bool isPlayerInside = false; // To track if the player is inside
     private bool isDoorClosedWithPlayerInside = false; // To track if the dryer is ready to run
-
+    [SerializeField] private GameObject promptMessage; // the press e to interact message that pops up
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -19,6 +19,7 @@ public class DryerInteraction : MonoBehaviour
     {
         if (isPlayerNear)
         {
+            
             // Open or close the door when F is pressed
             if (Input.GetKeyDown(KeyCode.F) && !isDoorOpen)
             {

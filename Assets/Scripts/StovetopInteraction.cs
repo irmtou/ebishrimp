@@ -6,9 +6,11 @@ public class StovetopInteraction : MonoBehaviour
 {
     private bool isStovetopOn = false; // To track if the stovetop is turned on
     public float damagePerSecond = 10f; // Amount of health to decrease per second
-
+    public bool isPlayerNear = false; // To track if the player is near the stovetop
+    [SerializeField] private GameObject promptMessage; // the press e to interact message that pops up
     void Update()
     {
+
         // Toggle stovetop on/off when the player presses a key (e.g., F)
         if (Input.GetKeyDown(KeyCode.F))
         {

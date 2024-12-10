@@ -15,11 +15,13 @@ public class GameManager : MonoBehaviour
     public bool ticking;
 
     public int shrimpCount{ get; private set;}
+   
 
     void FixedUpdate()
     {
         if(ticking)
         {
+            
             time = time - Time.deltaTime;
             if(time<=0f)
             {

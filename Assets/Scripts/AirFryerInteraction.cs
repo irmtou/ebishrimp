@@ -5,11 +5,11 @@ using UnityEngine;
 public class AirFryerInteraction : MonoBehaviour
 {
     private Animator animator; // Reference to the Animator
-    private bool isPlayerNear = false; // To track if the player is near the air fryer
+    public bool isPlayerNear = false; // To track if the player is near the air fryer
     private bool isTrayOpen = false; // To track the air fryer tray state
     private bool isTrayClosed = true; // To ensure the tray is closed before running
     private bool isPlayerInside = false; // To track if the player is inside the air fryer
-
+    [SerializeField] private GameObject promptMessage; // the press e to interact message that pops up
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -20,7 +20,7 @@ public class AirFryerInteraction : MonoBehaviour
         if (isPlayerNear)
         {
             // Open the tray when F is pressed and it's closed
-            if (Input.GetKeyDown(KeyCode.F) && !isTrayOpen)
+            if (Input.GetKeyDown(KeyCode.F) && !isTrayOpen) 
             {
                 OpenTray();
             }

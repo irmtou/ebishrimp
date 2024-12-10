@@ -5,9 +5,9 @@ using UnityEngine;
 public class WasherInteraction : MonoBehaviour
 {
     private Animator animator; // Reference to the Animator component
-    private bool isPlayerNear = false; // To track if the player is near the washer
+    public bool isPlayerNear = false; // To track if the player is near the washer
     private bool isDoorOpen = false; // To track the washer door state
-
+    [SerializeField] private GameObject promptMessage; // the press e to interact message that pops up
     void Start()
     {
         animator = GetComponent<Animator>(); // Get the Animator component
