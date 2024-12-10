@@ -2796,11 +2796,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2736577640613271328, guid: d2a1ae7fd7728af4aa578d5a58cf7c93, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2736577640613271328, guid: d2a1ae7fd7728af4aa578d5a58cf7c93, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2736577640613271328, guid: d2a1ae7fd7728af4aa578d5a58cf7c93, type: 3}
       propertyPath: m_LocalRotation.y
@@ -2820,11 +2818,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3482117736479214886, guid: d2a1ae7fd7728af4aa578d5a58cf7c93, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3482117736479214886, guid: d2a1ae7fd7728af4aa578d5a58cf7c93, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3482117736479214886, guid: d2a1ae7fd7728af4aa578d5a58cf7c93, type: 3}
       propertyPath: m_LocalRotation.y
@@ -2844,11 +2840,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4157179123835318995, guid: d2a1ae7fd7728af4aa578d5a58cf7c93, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4157179123835318995, guid: d2a1ae7fd7728af4aa578d5a58cf7c93, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4157179123835318995, guid: d2a1ae7fd7728af4aa578d5a58cf7c93, type: 3}
       propertyPath: m_LocalRotation.y
@@ -6116,6 +6110,7 @@ GameObject:
   - component: {fileID: 1198539054}
   - component: {fileID: 1198539053}
   - component: {fileID: 1198539052}
+  - component: {fileID: 1198539056}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -6210,6 +6205,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1198539056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198539051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0945febd198249099031b21270072a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrimpCounter: {fileID: 446486248}
+  time: {fileID: 1864307113}
 --- !u!1 &1214546459
 GameObject:
   m_ObjectHideFlags: 3

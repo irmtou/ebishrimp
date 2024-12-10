@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
     {
         score = 0;
         ticking  = true;
-        LoadLevel("SampleTiledKitchen");
+        LoadLevel("KitchenTIled");
     }
 
     public void LoadLevel(string sceneName)

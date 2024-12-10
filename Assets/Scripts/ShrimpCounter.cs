@@ -14,9 +14,12 @@ public class ShrimpCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        shrimpCounter.text = "Shrimp Counter: " + GameManager.Instance.shrimpCount.ToString("00");
-        int timeNum = (int) GameManager.Instance.time;
-        time.text = timeNum.ToString("000");
+        if(GameManager.Instance != null)
+        {
+            shrimpCounter.text = "Shrimp Counter: " + GameManager.Instance.shrimpCount.ToString("00");
+            int timeNum = (int) GameManager.Instance.time;
+            time.text = timeNum.ToString("000");
+        }
     }
 }
 

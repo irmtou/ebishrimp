@@ -32,9 +32,10 @@ public class FridgeSpawner : MonoBehaviour {
             for (int i = 0; i < shrimpBatchSize; i++) {
                 GameObject shrimp = Instantiate(shrimpPrefab, spawnPoint.position, Quaternion.identity);
                 
-                //GameManager.Instance.changeShrimpCount(1);  //Uncomment when you want shrimpCount UI to work
-                //Currently GameManager is not in the scene where this is used
-
+                if(GameManager.Instance != null)
+                {
+                    GameManager.Instance.changeShrimpCount(1);
+                }
                 yield return new WaitForSeconds(0.2f); // Delay between spawning individual shrimp
             }
 
