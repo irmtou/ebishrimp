@@ -108,6 +108,8 @@ public class GameManager : MonoBehaviour
         if (shrimpCount<=0)
         {
             //end game if so
+            ticking = false;
+            new WaitForSeconds(2f);
             WinScreen();
         }
     }

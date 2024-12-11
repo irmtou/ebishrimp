@@ -25,7 +25,10 @@ public class ShrimpFollower : MonoBehaviour {
 
     void Start() {
         // Initialize with a random offset
+        leader = GameObject.FindGameObjectWithTag("Invisible").GetComponent<Transform>();
         targetOffset = GetRandomOffset();
+        shrimpManager = FindObjectOfType<ShrimpManager>();
+        shrimpManager.AddShrimpToTroupe(gameObject);
     }
     // I applied Perlin noise because the normal movement was extremely stiff
     // I learned that there are flocking algorithms but that itself was a lot
