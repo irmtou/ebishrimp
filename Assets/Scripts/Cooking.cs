@@ -47,9 +47,9 @@ public class CookingAppliance : MonoBehaviour {
                 shrimpInAppliance.Enqueue(shrimp.gameObject);
 
                 // Visually move shrimp ... Not sure if we should do it like this
-                StartCoroutine(ShrimpIntoAppliance(shrimp, shrimp.transform.position, shrimpInsertPoint.position + new Vector3(0, 0.5f * shrimpInAppliance.Count, 0)));// Adjust as needed
-                transform.localPosition =  shrimpInsertPoint.position + new Vector3(0, 0.5f * shrimpInAppliance.Count, 0);
-                shrimp.transform.rotation = Quaternion.identity;
+                StartCoroutine(ShrimpIntoAppliance(shrimp, shrimp.transform.position, shrimpInsertPoint.position + new Vector3(0, 0.5f * shrimpInAppliance.Count, 0)));
+                // transform.localPosition =  shrimpInsertPoint.position + new Vector3(0, 0.5f * shrimpInAppliance.Count, 0);
+                // shrimp.transform.rotation = Quaternion.identity;
                 // Disable shrimp's movement behavior
                 shrimp.enabled = false;
                 shrimpDeposited = true;
@@ -71,11 +71,21 @@ public class CookingAppliance : MonoBehaviour {
 
     private IEnumerator ShrimpIntoAppliance(ShrimpFollower shrimp, Vector3 startPos, Vector3 finalPos) {
         float elapsed = 0f;
-        float duration = 0.5f;
-        while(elapsed<duration)
+        float duration = 1f;
+        float arcHeight = 2f;
+
+        Vector3 originalScale = shrimp.transform.localScale;
+
+        while (elapsed<duration)
         {
             float t = elapsed/duration;
-            shrimp.transform.localPosition = Vector3.Lerp(startPos, finalPos, t);
+            Vector3 position = Vector3.Lerp(startPos, finalPos, t);
+            position.y += Mathf.Sin(t * Mathf.PI) * arcHeight;
+
+            shrimp.transform.position = position;
+
+            // Lerp = Linearly interpolate
+            shrimp.transform.localScale = Vector3.Lerp(originalScale, Vector3.zero, t);
             elapsed += Time.deltaTime;
             yield return null;
         }
