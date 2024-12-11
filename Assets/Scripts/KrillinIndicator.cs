@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class KrillinIndicator : MonoBehaviour
 {
-    [SerializeField] private GameObject promptMessage; // the press e to interact message that pops up\
+    [SerializeField] private GameObject promptMessage; // the press e to interact message that pops up
+    [SerializeField] private GameObject busyMessage; // tells the user that the appliance is busy
     
     public AirFryerInteraction airFryer;
     public DryerInteraction dryerCenter;
@@ -15,6 +16,7 @@ public class KrillinIndicator : MonoBehaviour
     public ApplianceInteraction cutBoard1;
     public ApplianceInteraction cutBoard2;
     public ApplianceInteraction mixer;
+    [SerializeField] private CookingAppliance chef;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,10 +42,20 @@ public class KrillinIndicator : MonoBehaviour
         || mixer.isPlayerNear
             )
             {
-                promptMessage.gameObject.SetActive(true);
+                if (chef.isCooking)
+                {
+                    busyMessage.gameObject.SetActive(true);
+                    promptMessage.gameObject.SetActive(false);
+                } else
+                {
+                    promptMessage.gameObject.SetActive(true);
+                    busyMessage.gameObject.SetActive(false);
+                }
+                
             } 
             else 
             {
+                busyMessage.gameObject.SetActive(false);
                 promptMessage.gameObject.SetActive(false);
             }
     }

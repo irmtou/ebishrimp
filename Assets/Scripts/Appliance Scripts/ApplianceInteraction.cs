@@ -17,6 +17,7 @@ public class ApplianceInteraction : MonoBehaviour
     {
         animator = GetComponent<Animator>(); //finds animator
         chef.maxShrimpCapacity = shrimpCount;
+        chef.shrimpInsertPoint = transform;
     }
 
     void Update()
