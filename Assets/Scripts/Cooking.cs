@@ -12,6 +12,7 @@ public class CookingAppliance : MonoBehaviour {
     public ShrimpManager shrimpManager; // Reference to the ShrimpManager
     public float interactionRadius = 3f; // Radius for detecting shrimp
     public LayerMask shrimpLayer;       // Layer mask for filtering shrimp
+    public ParticleSystem fireEffect;   // Reference to the fire particle system
 
     // Queue of shrimp currently in the appliance
     private Queue<GameObject> shrimpInAppliance = new Queue<GameObject>(); 
@@ -98,6 +99,11 @@ public class CookingAppliance : MonoBehaviour {
         while (shrimpInAppliance.Count > 0) {
             // Get the next shrimp to cook
             GameObject shrimp = shrimpInAppliance.Dequeue();
+
+            // Trigger the fire effect
+            if (fireEffect != null) {
+                fireEffect.Play(); // Start the fire effect
+            }
 
             Debug.Log("Cooking shrimp...");
             yield return new WaitForSeconds(cookingTimePerShrimp); // Simulate cooking time
