@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
+using System.Timers;
 using UnityEngine;
 
 public class CookingAppliance : MonoBehaviour {
@@ -45,12 +47,11 @@ public class CookingAppliance : MonoBehaviour {
                 shrimpInAppliance.Enqueue(shrimp.gameObject);
 
                 // Visually move shrimp ... Not sure if we should do it like this
-                shrimp.transform.position = shrimpInsertPoint.position + new Vector3(0, 0.5f * shrimpInAppliance.Count, 0); // Adjust as needed
+                StartCoroutine(ShrimpIntoAppliance(shrimp, shrimp.transform.position, shrimpInsertPoint.position + new Vector3(0, 0.5f * shrimpInAppliance.Count, 0)));// Adjust as needed
+                transform.localPosition =  shrimpInsertPoint.position + new Vector3(0, 0.5f * shrimpInAppliance.Count, 0);
                 shrimp.transform.rotation = Quaternion.identity;
-
                 // Disable shrimp's movement behavior
                 shrimp.enabled = false;
-
                 shrimpDeposited = true;
                 Debug.Log("Shrimp deposited into appliance.");
             }
@@ -65,6 +66,18 @@ public class CookingAppliance : MonoBehaviour {
         }
         else {
             Debug.Log("No eligible shrimp found to cook.");
+        }
+    }
+
+    private IEnumerator ShrimpIntoAppliance(ShrimpFollower shrimp, Vector3 startPos, Vector3 finalPos) {
+        float elapsed = 0f;
+        float duration = 0.5f;
+        while(elapsed<duration)
+        {
+            float t = elapsed/duration;
+            shrimp.transform.localPosition = Vector3.Lerp(startPos, finalPos, t);
+            elapsed += Time.deltaTime;
+            yield return null;
         }
     }
 

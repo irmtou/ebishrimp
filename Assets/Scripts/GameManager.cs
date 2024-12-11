@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
             if(time<=0f)
             {
                 GameOver();
+                ticking = false;
             }
         }
     }
