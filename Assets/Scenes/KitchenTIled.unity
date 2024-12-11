@@ -3432,7 +3432,7 @@ GameObject:
   - component: {fileID: 588121065}
   - component: {fileID: 588121064}
   m_Layer: 5
-  m_Name: MixingMessage
+  m_Name: busyMessage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4399,7 +4399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shrimpCount: 3
+  shrimpCount: 5
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
@@ -6859,7 +6859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shrimpCount: 2
+  shrimpCount: 1
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
@@ -9723,7 +9723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shrimpCount: 3
+  shrimpCount: 5
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
@@ -11217,7 +11217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shrimpCount: 3
+  shrimpCount: 1
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
@@ -11934,7 +11934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shrimpCount: 3
+  shrimpCount: 5
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
@@ -12591,10 +12591,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   promptMessage: {fileID: 1049578614}
   busyMessage: {fileID: 448263863}
-  airFryer: {fileID: 0}
-  dryerCenter: {fileID: 0}
-  dryerCounter: {fileID: 0}
-  washerCenter: {fileID: 0}
+  chef: {fileID: 3141613144764604248}
+  airFryer: {fileID: 1823946045}
+  dryerCenter: {fileID: 1459638430}
+  dryerCounter: {fileID: 1984985050}
+  washerCenter: {fileID: 786697284}
   stoveTop1: {fileID: 853362536}
   stoveTop2: {fileID: 525239426}
   cutBoard1: {fileID: 1114992854}
@@ -13133,6 +13134,7 @@ MonoBehaviour:
   shrimpLayer:
     serializedVersion: 2
     m_Bits: 512
+  isCooking: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
