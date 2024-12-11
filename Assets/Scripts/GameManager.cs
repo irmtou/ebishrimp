@@ -31,6 +31,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void Pause()
+    {
+        Time.timeScale = 0;
+    }
+
+    public void Unpause()
+    {
+        Time.timeScale = 1;
+    }
+
+
     //Called when script is being loaded
     private void Awake()
     {

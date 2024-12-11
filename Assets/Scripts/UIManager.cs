@@ -58,17 +58,14 @@ public class UIManager : MonoBehaviour
     }
     public void ToggleOptions()
     {
-        //TODO: PAUSE THE GAME IN THE BACKGROUND
-        //^^ This section is dangerous because it doesn't stop anything going on in the background while the game is "paused"
-        // shows the credits if its not shown, or disables them otherwise
         if (optionsView.activeSelf == true)
         {
             optionsView.SetActive(false);
-            GameManager.Instance.ticking = true;
+            GameManager.Instance.Unpause();
         } else 
         {
             optionsView.SetActive(true);
-            GameManager.Instance.ticking = false;
+            GameManager.Instance.Pause();
         }
     }
 
