@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/KitchenTIled.unity
     guid: 164b1bd8e70752347b97af0dc03a60dd
+  - enabled: 1
+    path: Assets/Scenes/Crustacean Devastacean.unity
+    guid: 57adf0399e242174eb179a2033bf84a8
+  - enabled: 1
+    path: Assets/Scenes/KrilledIt.unity
+    guid: 4cc002a37cef10b419ca4b7c0428ba12
   m_configObjects: {}
