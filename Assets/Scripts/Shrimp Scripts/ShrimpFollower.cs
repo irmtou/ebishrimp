@@ -64,6 +64,15 @@ public class ShrimpFollower : MonoBehaviour {
 
         velocity = Vector3.Lerp(velocity, (targetPosition - transform.position).normalized * moveSpeed, Time.deltaTime / positionSmoothness);
         transform.position += velocity * Time.deltaTime;
+        
+        /* keeps the shrimp from falling through the floor */
+        int lowestPosition = 0;
+        Vector3 p = transform.position;
+        if (p.y < lowestPosition)
+        {
+            p.y = lowestPosition;
+            transform.position = p;  // you can set the position as a whole, just not individual fields
+        }
 
         Quaternion wobble = Quaternion.Euler(
             Mathf.Sin(Time.time * wobbleSpeed) * wobbleIntensity,
