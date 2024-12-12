@@ -7,10 +7,10 @@ using UnityEngine;
 public class CookingAppliance : MonoBehaviour {
     [Header("Appliance Settings")]
     public int maxShrimpCapacity = 5; // Maximum number of shrimp the appliance can hold
-    public float cookingTimePerShrimp = 3f; // Time it takes to cook each shrimp
+    public float cookingTimePerShrimp = 3.0f; // Time it takes to cook each shrimp
     public Transform shrimpInsertPoint; // Where shrimp are visually placed in the appliance
     public ShrimpManager shrimpManager; // Reference to the ShrimpManager
-    public float interactionRadius = 3f; // Radius for detecting shrimp
+    public float interactionRadius = 3.0f; // Radius for detecting shrimp
     public LayerMask shrimpLayer;       // Layer mask for filtering shrimp
     
     // Queue of shrimp currently in the appliance

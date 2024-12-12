@@ -12,6 +12,7 @@ public class ApplianceInteraction : MonoBehaviour
     public bool isPlayerNear = false;       // To track if the player is near the mixer
     public bool currentlyCooking = false;   // tracks whether or not the appliance is busy cooking
     public AnimationClip animationClip;
+    private float cookTime;
     
     void Start()
     {
@@ -23,29 +24,36 @@ public class ApplianceInteraction : MonoBehaviour
         if (isPlayerNear)
         {
                // Turn on appliance if it isn't already on and the player prompts you to do so.
-            if (Input.GetKeyDown(KeyCode.F) && !this.currentlyCooking)
+            currentlyCooking = chef.isCooking;
+            if (currentlyCooking)
             {
-                chef.maxShrimpCapacity = shrimpCount;
-                chef.shrimpInsertPoint = this.transform;
-                chef.DepositShrimp();
-                StartCoroutine("Cooking");
-                
+                GetComponent<Renderer>().material.color = Color.red;
+            }
+            else
+            {
+                GetComponent<Renderer>().material.color = Color.white;
             }
         }
     }
 
     private IEnumerator Cooking()
     {
-        this.currentlyCooking = true; // set
-        float cookTime = shrimpCount * chef.cookingTimePerShrimp * Time.deltaTime; //the time it takes for the shrimp to cook + the amt of shrimp
+        cookTime = shrimpCount * chef.cookingTimePerShrimp * Time.deltaTime; //the time it takes for the shrimp to cook + the amt of shrimp
         yield return new WaitForSeconds(cookTime);
-        this.currentlyCooking = false; // retract after done cooking
+    }
+    public void CookDaShrimp()
+    {
+                chef.maxShrimpCapacity = shrimpCount;
+                chef.shrimpInsertPoint = transform;
+                chef.DepositShrimp();
+                // StartCoroutine(Cooking());
+                
     }
 
     private void StartMixer()
     {
         // when the appliance is running
-        if (this.currentlyCooking)
+        if (currentlyCooking)
         {
             Debug.Log("Shrimps cookin'");
             // Animation! animator.SetTrigger("animation clip name") or maybe other newfound logic
@@ -60,7 +68,7 @@ public class ApplianceInteraction : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // when the player enters the interaction zone
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Invisible"))
         {
             isPlayerNear = true;
             Debug.Log("Player is near an appliance.");
@@ -70,7 +78,7 @@ public class ApplianceInteraction : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         // when the player leaves the interaction zone
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Invisible"))
         {
             isPlayerNear = false;
             Debug.Log("Player left the appliance.");
@@ -80,10 +88,14 @@ public class ApplianceInteraction : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         // when the player is trying to access a running appliance
-        if (other.CompareTag("Player") && this.currentlyCooking) // Example key for entering the air fryer
+        if (other.CompareTag("Invisible") && currentlyCooking) // Example key for entering the air fryer
         {
             // maybe add some logic encouraging the player to wait
             Debug.Log("Wait for the appliance to finish cooking");
+        }
+        if (other.CompareTag("Invisible") && Input.GetKeyDown(KeyCode.F) && !this.currentlyCooking)
+        {
+            CookDaShrimp();
         }
     }
 }
