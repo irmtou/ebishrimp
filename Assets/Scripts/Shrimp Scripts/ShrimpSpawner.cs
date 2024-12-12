@@ -8,9 +8,9 @@ public class FridgeSpawner : MonoBehaviour {
     public Animator fridgeAnimator; // Animator to control the fridge door animation
     public string fridgeAnimationName = "FridgeOpenClose"; // The name of the opening/closing animation
     public float animationDuration = 2.5f; // Total duration of the animation
-    public float spawnIntervalMin = 2f; // Minimum time between spawns
-    public float spawnIntervalMax = 5f; // Maximum time between spawns
-    public int shrimpBatchSize = 4; // Number of shrimp to spawn per batch
+    public float spawnIntervalMin = 4f; // Minimum time between spawns
+    public float spawnIntervalMax = 9f; // Maximum time between spawns
+    public int shrimpBatchSize = 3; // Number of shrimp to spawn per batch
 
     [Header("Shrimp Manager")]
     public ShrimpManager shrimpManager; // Reference to the ShrimpManager
@@ -39,7 +39,7 @@ public class FridgeSpawner : MonoBehaviour {
                 if (shrimpManager != null) {
                     shrimpManager.AddShrimpToTroupe(shrimp);
                 }
-                // Delay between spawning individual shrimp
+                //Delay between spawning individual shrimp
                 yield return new WaitForSeconds(0.2f);
             }
 
