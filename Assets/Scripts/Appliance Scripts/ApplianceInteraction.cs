@@ -2,11 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-/* Logic for all appliances should be roughly along these lines */
 public class ApplianceInteraction : MonoBehaviour
 {
-    private Animator animator;              // Reference to the Animator    
+    public Animator animator;              // Reference to the Animator    
     public int shrimpCount = 3;             // the amount of shrimp that can go into the mixer
     [SerializeField] private CookingAppliance chef;  // the chef shall decide the cooking functions :)
     public bool isPlayerNear = false;       // To track if the player is near the mixer
@@ -16,11 +14,17 @@ public class ApplianceInteraction : MonoBehaviour
     
     void Start()
     {
-        animator = GetComponent<Animator>(); //finds animator
+        animator = GetComponent<Animator>(); // Corrected to use GetComponent<Animator>()
     }
 
     void Update()
     {
+        // Update the animation state based on currentlyCooking
+        if (animator != null)
+        {
+            animator.SetBool("IsCooking", currentlyCooking);
+        }
+
         if (isPlayerNear)
         {
                // Turn on appliance if it isn't already on and the player prompts you to do so.
@@ -56,8 +60,7 @@ public class ApplianceInteraction : MonoBehaviour
         if (currentlyCooking)
         {
             Debug.Log("Shrimps cookin'");
-            // Animation! animator.SetTrigger("animation clip name") or maybe other newfound logic
-            // Add logic for affecting health, gameplay, or other effects here
+            // Animation can now be controlled by the IsCooking bool in the Animator
         }
         else
         {
@@ -90,7 +93,6 @@ public class ApplianceInteraction : MonoBehaviour
         // when the player is trying to access a running appliance
         if (other.CompareTag("Invisible") && currentlyCooking) // Example key for entering the air fryer
         {
-            // maybe add some logic encouraging the player to wait
             Debug.Log("Wait for the appliance to finish cooking");
         }
         if (other.CompareTag("Invisible") && Input.GetKeyDown(KeyCode.F) && !this.currentlyCooking)

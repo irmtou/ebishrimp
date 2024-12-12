@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AirFryerInteraction : MonoBehaviour
 {
-    private Animator animator; // Reference to the Animator
+    public Animator animator; // Reference to the Animator
     public bool isPlayerNear = false; // To track if the player is near the air fryer
     private bool isTrayOpen = false; // To track the air fryer tray state
     private bool isTrayClosed = true; // To ensure the tray is closed before running
