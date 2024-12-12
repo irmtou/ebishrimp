@@ -1,0 +1,112 @@
+{
+  "asset": {
+    "generator": "UnityGLTF",
+    "version": "2.0"
+  },
+  "extensionsUsed": [
+    "KHR_materials_specular"
+  ],
+  "images": [
+    {
+      "uri": "fryrice.jpg",
+      "name": "fryrice"
+    },
+    {
+      "uri": "Frame-Material.jpg",
+      "name": "Frame-Material.001_normal"
+    },
+    {
+      "uri": "Frame-Material-1.jpg",
+      "name": "Frame-Material.001_baseColor"
+    },
+    {
+      "uri": "Frame-Material-2.jpg",
+      "name": "Frame-Material.001_metallicRoughness"
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.89883327484130859
+      },
+      "name": "material_0",
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.269177735
+        }
+      }
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 2
+        },
+        "metallicFactor": 0.0,
+        "metallicRoughnessTexture": {
+          "index": 3
+        }
+      },
+      "normalTexture": {
+        "index": 1
+      },
+      "name": "Frame-Material.001",
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.3447364
+        }
+      }
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          0.124356963
+        ],
+        "roughnessFactor": 0.0
+      },
+      "alphaMode": "BLEND",
+      "name": "Glas.001",
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8421643
+        }
+      }
+    }
+  ],
+  "samplers": [
+    {
+      "minFilter": 9987
+    },
+    {
+      "minFilter": 9987
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0,
+      "name": "fryrice"
+    },
+    {
+      "sampler": 1,
+      "source": 1,
+      "name": "Frame-Material.001_normal"
+    },
+    {
+      "sampler": 1,
+      "source": 2,
+      "name": "Frame-Material.001_baseColor"
+    },
+    {
+      "sampler": 1,
+      "source": 3,
+      "name": "Frame-Material.001_metallicRoughness"
+    }
+  ]
+}

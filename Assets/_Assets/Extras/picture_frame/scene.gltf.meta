@@ -1,0 +1,111 @@
+fileFormatVersion: 2
+guid: a92bf25f2cf29f640a736a156cfa1529
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Frame-Material.001_baseColor
+    second: {fileID: 2800000, guid: 9017617da74955e489e399288d567141, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Frame-Material.001_metallicRoughness
+    second: {fileID: 2800000, guid: 78f4665e796864e4aaa6bfc4b70a61c4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Frame-Material.001_normal
+    second: {fileID: 2800000, guid: 0b1c4fc514f41c9429b0adfcf4c543f6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: material_0_baseColor
+    second: {fileID: 2800000, guid: 19b4c9323880ce640aa398cab9a084aa, type: 3}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 804e1ce4c496647cfa3f1a1134187c71, type: 3}
+  _removeEmptyRootObjects: 1
+  _scaleFactor: 10
+  _deduplicateResources: 0
+  _maximumLod: 300
+  _readWriteEnabled: 1
+  _generateColliders: 0
+  _swapUvs: 0
+  _generateLightmapUVs: 0
+  _importBlendShapeNames: 1
+  _blendShapeFrameWeight:
+    _option: 0
+    _multiplier: 1
+  _importNormals: 0
+  _importTangents: 0
+  _importCamera: 2
+  _importAnimations: 2
+  _mecanimHumanoidFlip: 0
+  _addAnimatorComponent: 0
+  _animationLoopTime: 1
+  _animationLoopPose: 0
+  _importMaterials: 1
+  _enableGpuInstancing: 0
+  _texturesReadWriteEnabled: 1
+  _generateMipMaps: 1
+  _useSceneNameIdentifier: 1
+  _textureCompression: -50
+  _gltfAsset: '<b>Generator: </b>Sketchfab-15.10.0
+
+    <b>Version: </b>2.0
+
+    
+
+    <b>Extras:
+    </b>
+
+    "author": "Oneironauticus (https://sketchfab.com/oneironauticus)"
+
+    "license":
+    "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)"
+
+    "source": "https://sketchfab.com/3d-models/picture-frame-01006278a27e402c9ccf5a69358c3add"
+
+    "title":
+    "Picture Frame"
+
+'
+  optimizeGameObjects: 0
+  materials:
+  - {fileID: -2840136634868304333, guid: a92bf25f2cf29f640a736a156cfa1529, type: 3}
+  - {fileID: 5263982152078318297, guid: a92bf25f2cf29f640a736a156cfa1529, type: 3}
+  - {fileID: -2650536285642723632, guid: a92bf25f2cf29f640a736a156cfa1529, type: 3}
+  textures:
+  - {fileID: 2800000, guid: 8b57be2ed3bacbb4a8786317316cae47, type: 3}
+  - {fileID: 2800000, guid: 78f4665e796864e4aaa6bfc4b70a61c4, type: 3}
+  - {fileID: 2800000, guid: 0b1c4fc514f41c9429b0adfcf4c543f6, type: 3}
+  - {fileID: 2800000, guid: 9017617da74955e489e399288d567141, type: 3}
+  hasSceneData: 1
+  hasAnimationData: 0
+  hasMaterialData: 1
+  hasTextureData: 1
+  animations: []
+  _extensions:
+  - name: KHR_materials_specular
+    supported: 1
+    used: 1
+    required: 0
+  _textures:
+  - texture: {fileID: 2800000, guid: 8b57be2ed3bacbb4a8786317316cae47, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: 78f4665e796864e4aaa6bfc4b70a61c4, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: 0b1c4fc514f41c9429b0adfcf4c543f6, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: 9017617da74955e489e399288d567141, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 1
+  _mainAssetIdentifier: scenes/Sketchfab_Scene
+  _importPlugins: []
