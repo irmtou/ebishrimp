@@ -6,7 +6,7 @@ public class DryerInteraction : MonoBehaviour
     private bool isPlayerNear = false;
     private bool isDoorOpen = false;
     private bool isPlayerInside = false;
-    private bool isDoorClosedWithPlayerInside = false;
+    // private bool isDoorClosedWithPlayerInside = false; // not used
     [SerializeField] private GameObject promptMessage;
 
     void Start()

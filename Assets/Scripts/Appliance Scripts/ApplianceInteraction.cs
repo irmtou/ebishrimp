@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,7 +25,14 @@ public class ApplianceInteraction : MonoBehaviour
         // Update the animation state based on currentlyCooking
         if (animator != null)
         {
-            animator.SetBool("IsCooking", currentlyCooking);
+            try
+            {
+                animator.SetBool("IsCooking", currentlyCooking);
+            }
+            catch (Exception e)
+            {
+                Debug.Log(e.Message);
+            }
         }
 
         if (isPlayerNear)

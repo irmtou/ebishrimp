@@ -12,6 +12,9 @@ public class CookingAppliance : MonoBehaviour {
     public ShrimpManager shrimpManager; // Reference to the ShrimpManager
     public float interactionRadius = 3.0f; // Radius for detecting shrimp
     public LayerMask shrimpLayer;       // Layer mask for filtering shrimp
+    public GameObject sillySrimp; // the UI object that shows when a shrimp has been cooked
+    public GameObject sillySrimpCanvas;
+    public List<GameObject> srimps = new List<GameObject>();
     
     // Queue of shrimp currently in the appliance
     private Queue<GameObject> shrimpInAppliance = new Queue<GameObject>(); 
@@ -46,6 +49,7 @@ public class CookingAppliance : MonoBehaviour {
                 shrimpManager.RemoveShrimpFromTroupe(shrimp.gameObject);
                 shrimpInAppliance.Enqueue(shrimp.gameObject);
 
+
                 // Visually move shrimp ... Not sure if we should do it like this
                 StartCoroutine(ShrimpIntoAppliance(shrimp, shrimp.transform.position, shrimpInsertPoint.position + new Vector3(0, 0.5f * shrimpInAppliance.Count, 0)));
                 // transform.localPosition =  shrimpInsertPoint.position + new Vector3(0, 0.5f * shrimpInAppliance.Count, 0);
@@ -75,7 +79,11 @@ public class CookingAppliance : MonoBehaviour {
         float arcHeight = 2f;
 
         Vector3 originalScale = shrimp.transform.localScale;
-
+        // trigger srimp animation
+        var positionOff = new Vector3(Random.Range(-10.0f, 10.0f), Random.Range(-10.0f, 10.0f),0);
+        GameObject srimp1 = Instantiate(sillySrimp, sillySrimpCanvas.transform) as GameObject;
+        srimp1.transform.position += positionOff;
+        srimps.Add(srimp1);
         while (elapsed<duration)
         {
             float t = elapsed/duration;
@@ -89,6 +97,8 @@ public class CookingAppliance : MonoBehaviour {
             elapsed += Time.deltaTime;
             yield return null;
         }
+        // delete srimp
+        srimps.Remove(srimp1);
     }
 
 
