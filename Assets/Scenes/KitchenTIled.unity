@@ -179,9 +179,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 390370524}
     - target: {fileID: 1766238921346102754, guid: 44f44712d06c2ab4b8f1738972990305, type: 3}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 8300000, guid: e43f0be02a4954547abe3e66c1216406, type: 3}
+    - target: {fileID: 1766238921346102754, guid: 44f44712d06c2ab4b8f1738972990305, type: 3}
+      propertyPath: sound1
+      value: 
+      objectReference: {fileID: 8300000, guid: e43f0be02a4954547abe3e66c1216406, type: 3}
+    - target: {fileID: 1766238921346102754, guid: 44f44712d06c2ab4b8f1738972990305, type: 3}
       propertyPath: controller
       value: 
       objectReference: {fileID: 196476338}
+    - target: {fileID: 1766238921346102754, guid: 44f44712d06c2ab4b8f1738972990305, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 653840507}
     - target: {fileID: 1766238921346102754, guid: 44f44712d06c2ab4b8f1738972990305, type: 3}
       propertyPath: turnSmoothTime
       value: 0.2
