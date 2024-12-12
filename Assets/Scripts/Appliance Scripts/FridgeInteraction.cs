@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FridgeInteraction : MonoBehaviour
 {
-    private Animator animator; // Reference to the Animator
+    public Animator animator; // Reference to the Animator
     private bool isPlayerNear = false; // Track if the player is close to the fridge
 
     void Start()

@@ -2,34 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-/* Logic for all appliances should be roughly along these lines */
 public class ApplianceInteraction : MonoBehaviour
 {
-    private Animator animator;              // Reference to the Animator    
+    public Animator animator;              // Reference to the Animator    
     public int shrimpCount = 3;             // the amount of shrimp that can go into the mixer
     [SerializeField] private CookingAppliance chef;  // the chef shall decide the cooking functions :)
     public bool isPlayerNear = false;       // To track if the player is near the mixer
     public bool currentlyCooking = false;   // tracks whether or not the appliance is busy cooking
     public AnimationClip animationClip;
-    
+
     void Start()
     {
-        animator = GetComponent<Animator>(); //finds animator
+        animator = GetComponent<Animator>(); // Corrected to use GetComponent<Animator>()
     }
 
     void Update()
     {
+        // Update the animation state based on currentlyCooking
+        if (animator != null)
+        {
+            animator.SetBool("IsCooking", currentlyCooking);
+        }
+
         if (isPlayerNear)
         {
-               // Turn on appliance if it isn't already on and the player prompts you to do so.
+            // Turn on appliance if it isn't already on and the player prompts you to do so.
             if (Input.GetKeyDown(KeyCode.F) && !this.currentlyCooking)
             {
                 chef.maxShrimpCapacity = shrimpCount;
                 chef.shrimpInsertPoint = this.transform;
                 chef.DepositShrimp();
-                StartCoroutine("Cooking");
-                
+                StartCoroutine(Cooking());
             }
         }
     }
@@ -37,9 +40,24 @@ public class ApplianceInteraction : MonoBehaviour
     private IEnumerator Cooking()
     {
         this.currentlyCooking = true; // set
-        float cookTime = shrimpCount * chef.cookingTimePerShrimp * Time.deltaTime; //the time it takes for the shrimp to cook + the amt of shrimp
+        float cookTime = shrimpCount * chef.cookingTimePerShrimp;
+
+        // Start the cooking animation
+        if (animator != null)
+        {
+            animator.SetBool("IsCooking", true);
+        }
+
         yield return new WaitForSeconds(cookTime);
-        this.currentlyCooking = false; // retract after done cooking
+
+        // Finish cooking
+        this.currentlyCooking = false;
+
+        // Stop the cooking animation
+        if (animator != null)
+        {
+            animator.SetBool("IsCooking", false);
+        }
     }
 
     private void StartMixer()
@@ -48,8 +66,7 @@ public class ApplianceInteraction : MonoBehaviour
         if (this.currentlyCooking)
         {
             Debug.Log("Shrimps cookin'");
-            // Animation! animator.SetTrigger("animation clip name") or maybe other newfound logic
-            // Add logic for affecting health, gameplay, or other effects here
+            // Animation can now be controlled by the IsCooking bool in the Animator
         }
         else
         {
@@ -80,9 +97,8 @@ public class ApplianceInteraction : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         // when the player is trying to access a running appliance
-        if (other.CompareTag("Player") && this.currentlyCooking) // Example key for entering the air fryer
+        if (other.CompareTag("Player") && this.currentlyCooking)
         {
-            // maybe add some logic encouraging the player to wait
             Debug.Log("Wait for the appliance to finish cooking");
         }
     }

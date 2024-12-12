@@ -207,7 +207,15 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8860967987412950448, guid: 44f44712d06c2ab4b8f1738972990305, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8860967987412950448, guid: 44f44712d06c2ab4b8f1738972990305, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8860967987412950448, guid: 44f44712d06c2ab4b8f1738972990305, type: 3}
+      propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -237,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac58d8e0f54401646808b7ee40c757f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayerNear: 0
+  animator: {fileID: 425947541}
   promptMessage: {fileID: 1049578614}
 --- !u!4 &38651802 stripped
 Transform:
@@ -725,6 +733,7 @@ GameObject:
   m_Component:
   - component: {fileID: 131428319}
   - component: {fileID: 131428318}
+  - component: {fileID: 131428320}
   m_Layer: 0
   m_Name: Room Light
   m_TagString: Untagged
@@ -809,6 +818,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 103.35199, y: 82.209, z: 82.418}
+--- !u!95 &131428320
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131428317}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eea8802de2c0b4e42b77cc67e62f9d2b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &136404325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1293,6 +1323,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2299836384993933847, guid: f6441423862678848abbe40b9e041c96, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1459638430}
+    - targetCorrespondingSourceObject: {fileID: 2299836384993933847, guid: f6441423862678848abbe40b9e041c96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1459638433}
     - targetCorrespondingSourceObject: {fileID: 8078803693289664108, guid: f6441423862678848abbe40b9e041c96, type: 3}
       insertIndex: -1
       addedObject: {fileID: 358054939}
@@ -1424,6 +1457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   shrimpCount: 3
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
@@ -1678,6 +1712,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2299836384993933847, guid: f6441423862678848abbe40b9e041c96, type: 3}
       insertIndex: -1
       addedObject: {fileID: 937364427}
+    - targetCorrespondingSourceObject: {fileID: 2299836384993933847, guid: f6441423862678848abbe40b9e041c96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 937364431}
+    - targetCorrespondingSourceObject: {fileID: 2299836384993933847, guid: f6441423862678848abbe40b9e041c96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 937364430}
+    - targetCorrespondingSourceObject: {fileID: 2299836384993933847, guid: f6441423862678848abbe40b9e041c96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 937364432}
     - targetCorrespondingSourceObject: {fileID: 8078803693289664108, guid: f6441423862678848abbe40b9e041c96, type: 3}
       insertIndex: -1
       addedObject: {fileID: 21752297}
@@ -6809,7 +6852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac58d8e0f54401646808b7ee40c757f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayerNear: 0
+  animator: {fileID: 0}
   promptMessage: {fileID: 1049578614}
 --- !u!1 &379710768
 GameObject:
@@ -7106,7 +7149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 390370521}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13485773, y: 8.8247126e-10, z: -1.2010523e-10, w: 0.990865}
+  m_LocalRotation: {x: 0.13485773, y: 0, z: 0, w: 0.990865}
   m_LocalPosition: {x: 0, y: 2.6153228, z: -7.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7320,6 +7363,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 415913917}
   m_CullTransparentMesh: 1
+--- !u!1 &425947540
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 425947542}
+  - component: {fileID: 425947541}
+  m_Layer: 8
+  m_Name: DryerAnimator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &425947541
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425947540}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eea8802de2c0b4e42b77cc67e62f9d2b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!4 &425947542
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425947540}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.5, y: -0.47379583, z: 5.455802}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &446486246
 GameObject:
   m_ObjectHideFlags: 0
@@ -7875,6 +7971,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 8927897461957606003, guid: 503cef75e5e72244ba9710eb6f271132, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927897461957606003, guid: 503cef75e5e72244ba9710eb6f271132, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -7897,6 +8001,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1039319326416491012, guid: 503cef75e5e72244ba9710eb6f271132, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1984985050}
+    - targetCorrespondingSourceObject: {fileID: 1039319326416491012, guid: 503cef75e5e72244ba9710eb6f271132, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1984985054}
   m_SourcePrefab: {fileID: 100100000, guid: 503cef75e5e72244ba9710eb6f271132, type: 3}
 --- !u!4 &517996771 stripped
 Transform:
@@ -8036,6 +8143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   shrimpCount: 3
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
@@ -8948,6 +9056,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3896202464714515287, guid: dd7daeb26d6d3874ca78b5f26d1090ab, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2043882571}
+    - targetCorrespondingSourceObject: {fileID: 3896202464714515287, guid: dd7daeb26d6d3874ca78b5f26d1090ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2043882572}
   m_SourcePrefab: {fileID: 100100000, guid: dd7daeb26d6d3874ca78b5f26d1090ab, type: 3}
 --- !u!4 &711715733 stripped
 Transform:
@@ -9181,6 +9292,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1048367462581851420, guid: 60d8bc2b8b69961468eef2b1cf70334a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1823946045}
+    - targetCorrespondingSourceObject: {fileID: 1048367462581851420, guid: 60d8bc2b8b69961468eef2b1cf70334a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1823946050}
+    - targetCorrespondingSourceObject: {fileID: 1048367462581851420, guid: 60d8bc2b8b69961468eef2b1cf70334a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1823946049}
+    - targetCorrespondingSourceObject: {fileID: 2265181344828881308, guid: 60d8bc2b8b69961468eef2b1cf70334a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1110779914}
     - targetCorrespondingSourceObject: {fileID: 2539435406895911246, guid: 60d8bc2b8b69961468eef2b1cf70334a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 203435280}
@@ -9348,6 +9468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   shrimpCount: 5
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
@@ -9688,6 +9809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   shrimpCount: 3
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
@@ -9851,6 +9973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   shrimpCount: 3
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
@@ -10426,12 +10549,65 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.7290941, y: 1.0105007, z: 0.71885985}
   m_Center: {x: 0.011836234, y: -0.1914118, z: -0.28429216}
+--- !u!114 &937364430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937364420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac58d8e0f54401646808b7ee40c757f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 937364431}
+  promptMessage: {fileID: 0}
+--- !u!95 &937364431
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937364420}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eea8802de2c0b4e42b77cc67e62f9d2b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &937364432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937364420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 937364431}
+  shrimpCount: 5
+  chef: {fileID: 0}
+  isPlayerNear: 0
+  currentlyCooking: 0
+  animationClip: {fileID: 0}
 --- !u!1 &940881303
 GameObject:
   m_ObjectHideFlags: 0
@@ -11851,6 +12027,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1110779910 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2265181344828881308, guid: 60d8bc2b8b69961468eef2b1cf70334a, type: 3}
+  m_PrefabInstance: {fileID: 744371658}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1110779914
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110779910}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7987e60ea291dce41ab72a53d5f35964, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &1111379261 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2354751835593797901, guid: 669314213fd3cae4b86c5bbfb6b5dde8, type: 3}
@@ -11894,6 +12096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   shrimpCount: 1
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
@@ -13497,6 +13700,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6276527684664871112, guid: 12b1930f71aa0f145aa90da57d72f874, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1303934338}
+    - targetCorrespondingSourceObject: {fileID: 6276527684664871112, guid: 12b1930f71aa0f145aa90da57d72f874, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1303934341}
     - targetCorrespondingSourceObject: {fileID: 1199694430169837425, guid: 12b1930f71aa0f145aa90da57d72f874, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2131346707}
@@ -13571,6 +13777,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.729094, y: 1.0105007, z: 0.71072674}
   m_Center: {x: 0.016461138, y: -0.19585675, z: -0.28857735}
+--- !u!95 &1303934341
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471618756}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 37ab80daf35c6cd428e957f6fdad9601, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1316737335 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3896202464714515287, guid: dd7daeb26d6d3874ca78b5f26d1090ab, type: 3}
@@ -14489,11 +14716,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
 --- !u!65 &1419762606
@@ -14804,7 +15031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac58d8e0f54401646808b7ee40c757f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayerNear: 0
+  animator: {fileID: 1459638433}
   promptMessage: {fileID: 1049578614}
 --- !u!65 &1459638429
 BoxCollider:
@@ -14839,11 +15066,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1459638433}
   shrimpCount: 5
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
   animationClip: {fileID: 0}
+--- !u!95 &1459638433
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459638426}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eea8802de2c0b4e42b77cc67e62f9d2b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1495514866
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14951,6 +15200,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1366319148141757665, guid: 460fad0ad0d23fa41ad3e3c66ca70613, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1495514875}
+    - targetCorrespondingSourceObject: {fileID: 1366319148141757665, guid: 460fad0ad0d23fa41ad3e3c66ca70613, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1495514879}
+    - targetCorrespondingSourceObject: {fileID: 1366319148141757665, guid: 460fad0ad0d23fa41ad3e3c66ca70613, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1495514878}
   m_SourcePrefab: {fileID: 100100000, guid: 460fad0ad0d23fa41ad3e3c66ca70613, type: 3}
 --- !u!4 &1495514867 stripped
 Transform:
@@ -14971,8 +15226,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 1495514867}
   shrimpPrefab: {fileID: 2178724249243582397, guid: 669314213fd3cae4b86c5bbfb6b5dde8, type: 3}
-  fridgeAnimator: {fileID: 0}
-  fridgeAnimationName: FridgeOpenClose
+  fridgeAnimator: {fileID: 1495514878}
+  fridgeOpenAnimationName: FridgeOpen
   animationDuration: 2.5
   spawnIntervalMin: 3.5
   spawnIntervalMax: 7
@@ -14999,6 +15254,40 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9007014, y: 1.7352507, z: 0.5438298}
   m_Center: {x: -0.05087161, y: 0.08629131, z: -0.122691505}
+--- !u!95 &1495514878
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598391919}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 26be33aa5413f504ea62d7106aa41bab, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1495514879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598391919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1241cf476ccc2f4592ba397f984bd72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1495514878}
 --- !u!1 &1500493293
 GameObject:
   m_ObjectHideFlags: 0
@@ -15425,6 +15714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   shrimpCount: 3
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
@@ -16170,6 +16460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7bafe52daa75a4489c37d2f27872c94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   isPlayerNear: 0
 --- !u!114 &1823946045
 MonoBehaviour:
@@ -16183,11 +16474,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1823946050}
   shrimpCount: 3
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
   animationClip: {fileID: 0}
+--- !u!114 &1823946049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823946039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7bafe52daa75a4489c37d2f27872c94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1823946050}
+  isPlayerNear: 0
+--- !u!95 &1823946050
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823946039}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7987e60ea291dce41ab72a53d5f35964, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1836575204 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8134468839870442918, guid: 06d8e92ddcc65204d91c3529292b28f0, type: 3}
@@ -16543,6 +16870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   shrimpCount: 1
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
@@ -17241,12 +17569,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984985044}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac58d8e0f54401646808b7ee40c757f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayerNear: 0
+  animator: {fileID: 1984985054}
   promptMessage: {fileID: 1049578614}
 --- !u!114 &1984985050
 MonoBehaviour:
@@ -17260,11 +17588,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1984985054}
   shrimpCount: 5
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
   animationClip: {fileID: 0}
+--- !u!95 &1984985054
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984985044}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eea8802de2c0b4e42b77cc67e62f9d2b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2000056906
 GameObject:
   m_ObjectHideFlags: 3
@@ -17967,6 +18317,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.139049, y: 1.3594104, z: 2.1791608}
   m_Center: {x: 0.48565364, y: 0.07687932, z: 0.15947998}
+--- !u!95 &2043882572
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043882567}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eea8802de2c0b4e42b77cc67e62f9d2b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2083866034
 GameObject:
   m_ObjectHideFlags: 0
@@ -18568,3 +18939,4 @@ SceneRoots:
   - {fileID: 2083866036}
   - {fileID: 3141613144764604245}
   - {fileID: 339171670}
+  - {fileID: 425947542}
