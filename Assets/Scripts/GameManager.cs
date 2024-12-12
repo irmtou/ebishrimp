@@ -7,8 +7,6 @@ public class GameManager : MonoBehaviour
     // GameManager.Instance.(whatever method you'd like to access)
 
     public static GameManager Instance { get; private set; }
-    public AudioManager audioManager;
-    public AudioClip sound;
 
     public int cookedShrimpCount{ get; private set;}
 
@@ -96,7 +94,6 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         SceneManager.LoadScene("Crustacean Devastation");      // Game Over Screen (Loss)
-        audioManager.PlaySound(sound);
     }
 
     private void WinScreen()
