@@ -10,6 +10,8 @@ public class UIManager : MonoBehaviour
     /* The following vars are only applicable to the options scene */
     [SerializeField] private GameObject creditsView; // the empty game object associated with "credits screen"
     [SerializeField] private GameObject optionsView; // the empty game object associated with "options screen"
+    public AudioSource audioSource;
+    public AudioClip sound;
     // Start is called before the first frame update
     void Start()
     {
@@ -69,9 +71,15 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public void PlayHoverSound() {
+        audioSource.PlayOneShot(sound); // Play button hover sound
+    }
+
     public void ExitGame()
     {
-        // exits the game (won't work in test mode)
         Application.Quit();
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false; // This is for quitting in the editor
+        #endif
     }
 }
