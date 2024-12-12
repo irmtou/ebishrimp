@@ -50,8 +50,6 @@ public class ApplianceInteraction : MonoBehaviour
                 chef.maxShrimpCapacity = shrimpCount;
                 chef.shrimpInsertPoint = transform;
                 chef.DepositShrimp();
-                // StartCoroutine(Cooking());
-                
     }
 
     private void StartMixer()
