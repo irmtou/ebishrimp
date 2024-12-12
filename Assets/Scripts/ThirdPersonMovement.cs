@@ -9,8 +9,9 @@ public class ThirdPersonMovement : MonoBehaviour {
 
     public CharacterController controller;
 
-    public Transform cam; 
-
+    public Transform cam;
+    public AudioManager audioManager;
+    public AudioClip sound;
     public float speed = 6f;
     public float turnSmoothTime = 0.5f;
     public float gravity = -9.81f;
@@ -47,6 +48,7 @@ public class ThirdPersonMovement : MonoBehaviour {
         }
 
         if (Input.GetButtonDown("Jump") && controller.isGrounded) {
+            audioManager.PlaySound(sound);
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity); // Apply the jump force
         }
 
