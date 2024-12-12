@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class ApplianceInteraction : MonoBehaviour
 {
-    public Animator animator;              // Reference to the Animator    
+    public Animator animator;              // Reference to the Animator
+    public AudioManager audioManager;
+    public AudioClip sound;
     public int shrimpCount = 3;             // the amount of shrimp that can go into the mixer
     [SerializeField] private CookingAppliance chef;  // the chef shall decide the cooking functions :)
     public bool isPlayerNear = false;       // To track if the player is near the mixer
@@ -50,6 +52,7 @@ public class ApplianceInteraction : MonoBehaviour
                 chef.maxShrimpCapacity = shrimpCount;
                 chef.shrimpInsertPoint = transform;
                 chef.DepositShrimp();
+                audioManager.PlaySound(sound);
     }
 
     private void StartMixer()

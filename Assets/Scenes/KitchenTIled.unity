@@ -1374,6 +1374,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  audioManager: {fileID: 0}
+  sound: {fileID: 0}
   shrimpCount: 3
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
@@ -1521,7 +1523,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2654238394674137416, guid: 8d468adc2cff63f42b13ce4caf03c1d7, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8825179734044182030, guid: 8d468adc2cff63f42b13ce4caf03c1d7, type: 3}
@@ -6989,7 +6992,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 379710768}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.07040574, y: 0, z: 0, w: 0.9975185}
+  m_LocalRotation: {x: 0.07040575, y: 0, z: 0, w: 0.9975185}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8229,6 +8232,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  audioManager: {fileID: 653840507}
+  sound: {fileID: 8300000, guid: f5aeadc40f699264785afd6ac7a7a4ee, type: 3}
   shrimpCount: 3
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
@@ -8877,6 +8882,148 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3896202464714515287, guid: dd7daeb26d6d3874ca78b5f26d1090ab, type: 3}
   m_PrefabInstance: {fileID: 1351597364}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &653840505
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 653840508}
+  - component: {fileID: 653840507}
+  - component: {fileID: 653840506}
+  m_Layer: 7
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &653840506
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653840505}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &653840507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653840505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09b025fc235c8f24abc20259a0a72b95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 653840506}
+--- !u!4 &653840508
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653840505}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -1, z: 0, w: 0}
+  m_LocalPosition: {x: -5.21, y: -2.7, z: 8.51}
+  m_LocalScale: {x: 0.9092234, y: 0.9092234, z: 0.9092234}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &654778323
 GameObject:
   m_ObjectHideFlags: 3
@@ -8902,7 +9049,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 654778323}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.052249745, y: 0.000000029761619, z: -0.000000001557164, w: 0.9986341}
+  m_LocalRotation: {x: 0.052249745, y: 0, z: 0, w: 0.9986341}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9778,6 +9925,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  audioManager: {fileID: 653840507}
+  sound: {fileID: 8300000, guid: f5aeadc40f699264785afd6ac7a7a4ee, type: 3}
   shrimpCount: 3
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
@@ -9855,7 +10004,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2654238394674137416, guid: 8d468adc2cff63f42b13ce4caf03c1d7, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8825179734044182030, guid: 8d468adc2cff63f42b13ce4caf03c1d7, type: 3}
@@ -9942,6 +10092,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  audioManager: {fileID: 0}
+  sound: {fileID: 0}
   shrimpCount: 3
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
@@ -10120,6 +10272,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 866902973}
+  audioManager: {fileID: 653840507}
+  sound: {fileID: 8300000, guid: 8d6b8bc36a7d47a4094d1bd67ae45bf9, type: 3}
   shrimpCount: 5
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
@@ -12165,6 +12319,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  audioManager: {fileID: 653840507}
+  sound: {fileID: 8300000, guid: aae61674c616a8b48ba329063df057e1, type: 3}
   shrimpCount: 1
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
@@ -12990,7 +13146,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1214546459}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.03412447, y: -1.7700347e-15, z: -5.3588013e-17, w: 0.99941766}
+  m_LocalRotation: {x: 0.034124468, y: 0, z: 0, w: 0.9994176}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15269,6 +15425,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1459638437}
+  audioManager: {fileID: 653840507}
+  sound: {fileID: 8300000, guid: 8d6b8bc36a7d47a4094d1bd67ae45bf9, type: 3}
   shrimpCount: 5
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
@@ -15429,6 +15587,8 @@ MonoBehaviour:
   spawnPoint: {fileID: 1495514867}
   shrimpPrefab: {fileID: 2178724249243582397, guid: 669314213fd3cae4b86c5bbfb6b5dde8, type: 3}
   fridgeAnimator: {fileID: 1495514878}
+  audioManager: {fileID: 653840507}
+  sound: {fileID: 8300000, guid: c36c6947a7256dc47aa01b3558271746, type: 3}
   fridgeOpenAnimationName: FridgeOpen
   animationDuration: 2.5
   spawnIntervalMin: 3
@@ -15874,6 +16034,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  audioManager: {fileID: 653840507}
+  sound: {fileID: 8300000, guid: 773eac37d6253cf438950478311edcf1, type: 3}
   shrimpCount: 3
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
@@ -16109,6 +16271,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  audioManager: {fileID: 0}
+  sound: {fileID: 0}
   shrimpCount: 5
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
@@ -16971,6 +17135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1823946050}
+  audioManager: {fileID: 653840507}
+  sound: {fileID: 8300000, guid: f5aeadc40f699264785afd6ac7a7a4ee, type: 3}
   shrimpCount: 3
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
@@ -17413,6 +17579,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  audioManager: {fileID: 653840507}
+  sound: {fileID: 8300000, guid: aae61674c616a8b48ba329063df057e1, type: 3}
   shrimpCount: 1
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
@@ -18157,6 +18325,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1984985054}
+  audioManager: {fileID: 653840507}
+  sound: {fileID: 8300000, guid: 8d6b8bc36a7d47a4094d1bd67ae45bf9, type: 3}
   shrimpCount: 5
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
@@ -19523,3 +19693,4 @@ SceneRoots:
   - {fileID: 425947542}
   - {fileID: 759533186}
   - {fileID: 2026383518}
+  - {fileID: 653840508}

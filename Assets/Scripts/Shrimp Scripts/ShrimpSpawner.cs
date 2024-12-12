@@ -7,6 +7,8 @@ public class FridgeSpawner : MonoBehaviour
     public Transform spawnPoint; // The point where shrimp spawn
     public GameObject shrimpPrefab; // The shrimp prefab to spawn
     public Animator fridgeAnimator; // Animator to control the fridge door animation
+    public AudioManager audioManager;
+    public AudioClip sound;
     public string fridgeOpenAnimationName = "FridgeOpen"; // The name of the opening animation
     public float animationDuration = 2.5f; // Total duration of the animation
     public float spawnIntervalMin = 4f; // Minimum time between spawns
@@ -47,6 +49,8 @@ public class FridgeSpawner : MonoBehaviour
                     shrimpManager.AddShrimpToTroupe(shrimp);
                 }
             }
+
+            audioManager.PlaySound(sound);
 
 
             // Wait for the remaining part of the animation (door closing)
