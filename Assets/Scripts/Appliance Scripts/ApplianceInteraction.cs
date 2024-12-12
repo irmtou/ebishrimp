@@ -14,99 +14,105 @@ public class ApplianceInteraction : MonoBehaviour
     public bool currentlyCooking = false;   // tracks whether or not the appliance is busy cooking
     public AnimationClip animationClip;
     private float cookTime;
+    public Renderer applianceRenderer;
+    public Color cookingColor = Color.red; // Color while cooking
+    public Color idleColor = Color.white;  // Color when idle
     
-    void Start()
+     private void Start()
     {
-        animator = GetComponent<Animator>(); // Corrected to use GetComponent<Animator>()
-    }
+        // Initialize Animator and Renderer
+        animator = GetComponent<Animator>();
 
-    void Update()
-    {
-        // Update the animation state based on currentlyCooking
-        if (animator != null)
+        if (applianceRenderer == null)
         {
-            try
+            applianceRenderer = GetComponent<Renderer>();
+            if (applianceRenderer == null)
             {
-                animator.SetBool("IsCooking", currentlyCooking);
-            }
-            catch (Exception e)
-            {
-                Debug.Log(e.Message);
+                Debug.LogWarning($"No Renderer found on {gameObject.name}. Material changes will not work.");
             }
         }
-
-        if (isPlayerNear)
+         // Set initial material color
+        if (applianceRenderer != null)
         {
-               // Turn on appliance if it isn't already on and the player prompts you to do so.
-            currentlyCooking = chef.isCooking;
-            if (currentlyCooking)
-            {
-                GetComponent<Renderer>().material.color = Color.red;
-            }
-            else
-            {
-                GetComponent<Renderer>().material.color = Color.white;
-            }
-        }
-    }
-
-    private IEnumerator Cooking()
-    {
-        cookTime = shrimpCount * chef.cookingTimePerShrimp * Time.deltaTime; //the time it takes for the shrimp to cook + the amt of shrimp
-        yield return new WaitForSeconds(cookTime);
-    }
-    public void CookDaShrimp()
-    {
-                chef.maxShrimpCapacity = shrimpCount;
-                chef.shrimpInsertPoint = transform;
-                chef.DepositShrimp();
-                audioManager.PlaySound(sound);
-    }
-
-    private void StartMixer()
-    {
-        // when the appliance is running
-        if (currentlyCooking)
-        {
-            Debug.Log("Shrimps cookin'");
-            // Animation can now be controlled by the IsCooking bool in the Animator
-        }
-        else
-        {
-            Debug.Log("Shrimp ain't cookin'");
+            applianceRenderer.material.color = idleColor;
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        // when the player enters the interaction zone
         if (other.CompareTag("Invisible"))
         {
             isPlayerNear = true;
-            Debug.Log("Player is near an appliance.");
+            Debug.Log($"Player near {gameObject.name}");
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        // when the player leaves the interaction zone
         if (other.CompareTag("Invisible"))
         {
             isPlayerNear = false;
-            Debug.Log("Player left the appliance.");
+            Debug.Log($"Player left {gameObject.name}");
         }
     }
+    private IEnumerator Cooking()
+    {
+        cookTime = shrimpCount * chef.cookingTimePerShrimp * Time.deltaTime; //the time it takes for the shrimp to cook + the amt of shrimp
+        yield return new WaitForSeconds(cookTime);
+    }
+    
 
     private void OnTriggerStay(Collider other)
     {
-        // when the player is trying to access a running appliance
-        if (other.CompareTag("Invisible") && currentlyCooking) // Example key for entering the air fryer
+        // Ensure the player presses F and the appliance isn't already cooking
+        if (other.CompareTag("Invisible") && Input.GetKeyDown(KeyCode.F) && !chef.isCooking)
         {
-            Debug.Log("Wait for the appliance to finish cooking");
+            Debug.Log($"Player interacted with {gameObject.name}");
+            StartCoroutine(CookDaShrimp());
         }
-        if (other.CompareTag("Invisible") && Input.GetKeyDown(KeyCode.F) && !this.currentlyCooking)
+    }
+
+    private IEnumerator CookDaShrimp()
+    {
+        // Update the material color to show cooking state
+        if (applianceRenderer != null)
         {
-            CookDaShrimp();
+            applianceRenderer.material.color = cookingColor;
         }
+
+        // Play cooking sound
+        if (audioManager != null && sound != null)
+        {
+            audioManager.PlaySound(sound);
+        }
+
+        // Start cooking animation
+        if (animator != null)
+        {
+            animator.SetBool("IsCooking", true);
+        }
+
+        // Start the cooking process
+        chef.maxShrimpCapacity = shrimpCount;
+        chef.shrimpInsertPoint = transform;
+        chef.DepositShrimp();
+
+        // Wait for the cooking time to complete
+        float cookTime = shrimpCount * chef.cookingTimePerShrimp;
+        yield return new WaitForSeconds(cookTime);
+
+        // End cooking process
+        if (animator != null)
+        {
+            animator.SetBool("IsCooking", false);
+        }
+
+        // Reset material color to idle state
+        if (applianceRenderer != null)
+        {
+            applianceRenderer.material.color = idleColor;
+        }
+
+        Debug.Log($"Cooking completed for {gameObject.name}");
     }
 }

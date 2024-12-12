@@ -1401,6 +1401,9 @@ MonoBehaviour:
   isPlayerNear: 0
   currentlyCooking: 0
   animationClip: {fileID: 0}
+  applianceRenderer: {fileID: 0}
+  cookingColor: {r: 1, g: 0, b: 0, a: 1}
+  idleColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &201899618
 GameObject:
   m_ObjectHideFlags: 0
@@ -8294,6 +8297,9 @@ MonoBehaviour:
   isPlayerNear: 0
   currentlyCooking: 0
   animationClip: {fileID: 0}
+  applianceRenderer: {fileID: 0}
+  cookingColor: {r: 1, g: 0, b: 0, a: 1}
+  idleColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &541800812
 GameObject:
   m_ObjectHideFlags: 0
@@ -9893,6 +9899,9 @@ MonoBehaviour:
   isPlayerNear: 0
   currentlyCooking: 0
   animationClip: {fileID: 0}
+  applianceRenderer: {fileID: 0}
+  cookingColor: {r: 1, g: 0, b: 0, a: 1}
+  idleColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &855227350
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10060,6 +10069,9 @@ MonoBehaviour:
   isPlayerNear: 0
   currentlyCooking: 0
   animationClip: {fileID: 0}
+  applianceRenderer: {fileID: 0}
+  cookingColor: {r: 1, g: 0, b: 0, a: 1}
+  idleColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &866902967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10240,6 +10252,9 @@ MonoBehaviour:
   isPlayerNear: 0
   currentlyCooking: 0
   animationClip: {fileID: 0}
+  applianceRenderer: {fileID: 0}
+  cookingColor: {r: 1, g: 0, b: 0, a: 1}
+  idleColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!65 &866902975
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12315,6 +12330,9 @@ MonoBehaviour:
   isPlayerNear: 0
   currentlyCooking: 0
   animationClip: {fileID: 0}
+  applianceRenderer: {fileID: 0}
+  cookingColor: {r: 1, g: 0, b: 0, a: 1}
+  idleColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1123084050
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13148,7 +13166,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1214546459}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.034124468, y: 0, z: 0, w: 0.9994176}
+  m_LocalRotation: {x: 0.03412446, y: -4.4030352e-15, z: 5.1590203e-17, w: 0.99941766}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15464,6 +15482,9 @@ MonoBehaviour:
   isPlayerNear: 0
   currentlyCooking: 0
   animationClip: {fileID: 0}
+  applianceRenderer: {fileID: 0}
+  cookingColor: {r: 1, g: 0, b: 0, a: 1}
+  idleColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!95 &1459638437
 Animator:
   serializedVersion: 5
@@ -16073,6 +16094,9 @@ MonoBehaviour:
   isPlayerNear: 0
   currentlyCooking: 0
   animationClip: {fileID: 0}
+  applianceRenderer: {fileID: 0}
+  cookingColor: {r: 1, g: 0, b: 0, a: 1}
+  idleColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1628321693 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2972110767281291512, guid: 952c53b1e5c4dca429dd42710d428ddf, type: 3}
@@ -16310,6 +16334,9 @@ MonoBehaviour:
   isPlayerNear: 0
   currentlyCooking: 0
   animationClip: {fileID: 0}
+  applianceRenderer: {fileID: 0}
+  cookingColor: {r: 1, g: 0, b: 0, a: 1}
+  idleColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!65 &1656306407
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17174,6 +17201,9 @@ MonoBehaviour:
   isPlayerNear: 0
   currentlyCooking: 0
   animationClip: {fileID: 0}
+  applianceRenderer: {fileID: 0}
+  cookingColor: {r: 1, g: 0, b: 0, a: 1}
+  idleColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1823946049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17618,6 +17648,9 @@ MonoBehaviour:
   isPlayerNear: 0
   currentlyCooking: 0
   animationClip: {fileID: 0}
+  applianceRenderer: {fileID: 0}
+  cookingColor: {r: 1, g: 0, b: 0, a: 1}
+  idleColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1917328375 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7922661827993084233, guid: 60d8bc2b8b69961468eef2b1cf70334a, type: 3}
@@ -18424,6 +18457,9 @@ MonoBehaviour:
   isPlayerNear: 0
   currentlyCooking: 0
   animationClip: {fileID: 0}
+  applianceRenderer: {fileID: 0}
+  cookingColor: {r: 1, g: 0, b: 0, a: 1}
+  idleColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!95 &1984985054
 Animator:
   serializedVersion: 5
