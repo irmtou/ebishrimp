@@ -24,6 +24,9 @@ public class ShrimpFollower : MonoBehaviour {
     void Start() {
 
         targetOffset = GetRandomOffset();
+        leader = GameObject.FindGameObjectWithTag("Invisible").GetComponent<Transform>(); //Set leader reference
+        shrimpManager = FindObjectOfType<ShrimpManager>();  
+        shrimpManager.AddShrimpToTroupe(gameObject); //Add shrimp to troupe
 
         // Add a Capsule Collider if none exists
         CapsuleCollider collider = GetComponent<CapsuleCollider>();
