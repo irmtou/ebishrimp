@@ -130,7 +130,7 @@ public class ApplianceInteraction : MonoBehaviour
     {
          if (animator != null && animator.HasState(0, Animator.StringToHash("OpenDoor")))
         {
-            animator.SetTrigger("OpenDoor");
+            animator.SetBool("OpenDoor", true);
             isDoorOpen = true;
 
             // Wait for the door-opening animation to complete
@@ -143,7 +143,7 @@ public class ApplianceInteraction : MonoBehaviour
     {
         if (animator != null && animator.HasState(0, Animator.StringToHash("CloseDoor")))
         {
-            animator.SetTrigger("CloseDoor");
+            animator.SetBool("CloseDoor",true);
             isDoorOpen = false;
 
             // Wait for the door-closing animation to complete
