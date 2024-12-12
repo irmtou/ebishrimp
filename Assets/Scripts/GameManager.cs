@@ -84,6 +84,7 @@ public class GameManager : MonoBehaviour
         cookedShrimpCount = 0;
         ticking  = true;
         LoadLevel("KitchenTIled");
+        Time.timeScale = 1;
     }
 
     public void LoadLevel(string sceneName)
