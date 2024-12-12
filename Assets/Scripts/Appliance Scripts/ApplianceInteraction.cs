@@ -12,6 +12,8 @@ public class ApplianceInteraction : MonoBehaviour
     [SerializeField] private CookingAppliance chef;  // the chef shall decide the cooking functions :)
     public bool isPlayerNear = false;       // To track if the player is near the mixer
     public bool currentlyCooking = false;   // tracks whether or not the appliance is busy cooking
+    
+    public bool isDoorOpen = false;
     public AnimationClip animationClip;
     private float cookTime;
     public Renderer applianceRenderer;
@@ -74,6 +76,13 @@ public class ApplianceInteraction : MonoBehaviour
 
     private IEnumerator CookDaShrimp()
     {
+        // Open the door if it is not already open
+        if (!isDoorOpen)
+        {
+            yield return StartCoroutine(OpenDoor());
+        }
+        // Close the door after cooking
+        yield return StartCoroutine(CloseDoor());
         // Update the material color to show cooking state
         if (applianceRenderer != null)
         {
@@ -114,5 +123,49 @@ public class ApplianceInteraction : MonoBehaviour
         }
 
         Debug.Log($"Cooking completed for {gameObject.name}");
+    }
+
+
+    private IEnumerator OpenDoor()
+    {
+         if (animator != null && animator.HasState(0, Animator.StringToHash("OpenDoor")))
+        {
+            animator.SetTrigger("OpenDoor");
+            isDoorOpen = true;
+
+            // Wait for the door-opening animation to complete
+            yield return new WaitForSeconds(GetAnimationClipLength("OpenDoor"));
+            Debug.Log($"Door opened for {gameObject.name}");
+        }
+    }
+
+    private IEnumerator CloseDoor()
+    {
+        if (animator != null && animator.HasState(0, Animator.StringToHash("CloseDoor")))
+        {
+            animator.SetTrigger("CloseDoor");
+            isDoorOpen = false;
+
+            // Wait for the door-closing animation to complete
+            yield return new WaitForSeconds(GetAnimationClipLength("CloseDoor"));
+            Debug.Log($"Door closed for {gameObject.name}");
+        }
+    }
+    private float GetAnimationClipLength(string animationName)
+    {
+        if (animator == null) return 0f;
+
+        RuntimeAnimatorController ac = animator.runtimeAnimatorController;
+
+        foreach (AnimationClip clip in ac.animationClips)
+        {
+            if (clip.name == animationName)
+            {
+                return clip.length;
+            }
+        }
+
+        Debug.LogWarning($"Animation '{animationName}' not found on {gameObject.name}.");
+        return 0f;
     }
 }

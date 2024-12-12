@@ -1400,6 +1400,7 @@ MonoBehaviour:
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
+  isDoorOpen: 0
   animationClip: {fileID: 0}
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
@@ -8296,6 +8297,7 @@ MonoBehaviour:
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
+  isDoorOpen: 0
   animationClip: {fileID: 0}
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
@@ -9566,6 +9568,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7922661827993084233, guid: 60d8bc2b8b69961468eef2b1cf70334a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1917328378}
+    - targetCorrespondingSourceObject: {fileID: 7922661827993084233, guid: 60d8bc2b8b69961468eef2b1cf70334a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1917328379}
     - targetCorrespondingSourceObject: {fileID: 1048367462581851420, guid: 60d8bc2b8b69961468eef2b1cf70334a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1823946044}
@@ -9898,6 +9903,7 @@ MonoBehaviour:
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
+  isDoorOpen: 0
   animationClip: {fileID: 0}
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
@@ -10068,6 +10074,7 @@ MonoBehaviour:
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
+  isDoorOpen: 0
   animationClip: {fileID: 0}
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
@@ -10251,6 +10258,7 @@ MonoBehaviour:
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
+  isDoorOpen: 0
   animationClip: {fileID: 0}
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
@@ -12271,7 +12279,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1110779910}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 7987e60ea291dce41ab72a53d5f35964, type: 2}
   m_CullingMode: 0
@@ -12329,6 +12337,7 @@ MonoBehaviour:
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
+  isDoorOpen: 0
   animationClip: {fileID: 0}
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
@@ -13166,7 +13175,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1214546459}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.03412446, y: -4.4030352e-15, z: 5.1590203e-17, w: 0.99941766}
+  m_LocalRotation: {x: 0.034124468, y: 0, z: 0, w: 0.9994176}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15481,6 +15490,7 @@ MonoBehaviour:
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
+  isDoorOpen: 0
   animationClip: {fileID: 0}
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
@@ -16093,6 +16103,7 @@ MonoBehaviour:
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
+  isDoorOpen: 0
   animationClip: {fileID: 0}
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
@@ -16333,6 +16344,7 @@ MonoBehaviour:
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
+  isDoorOpen: 0
   animationClip: {fileID: 0}
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
@@ -17200,6 +17212,7 @@ MonoBehaviour:
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
+  isDoorOpen: 0
   animationClip: {fileID: 0}
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
@@ -17647,6 +17660,7 @@ MonoBehaviour:
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
+  isDoorOpen: 0
   animationClip: {fileID: 0}
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
@@ -17678,6 +17692,27 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!95 &1917328379
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917328375}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0c12b7bcc8321bd4a8543b4c05cf9f4b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1923175346
 GameObject:
   m_ObjectHideFlags: 0
@@ -18456,6 +18491,7 @@ MonoBehaviour:
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
+  isDoorOpen: 0
   animationClip: {fileID: 0}
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
