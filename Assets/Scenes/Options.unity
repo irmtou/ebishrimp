@@ -488,6 +488,7 @@ GameObject:
   - component: {fileID: 107762621}
   - component: {fileID: 107762620}
   - component: {fileID: 107762619}
+  - component: {fileID: 107762622}
   m_Layer: 5
   m_Name: buttonMiddle (1)
   m_TagString: Untagged
@@ -606,6 +607,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 107762617}
   m_CullTransparentMesh: 1
+--- !u!114 &107762622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107762617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1727823452}
+          m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+          m_MethodName: PlayHoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &121071265
 GameObject:
   m_ObjectHideFlags: 0
@@ -2975,21 +3005,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Krill Yourself was originally created as a 3D Game Programming Project
+  m_text: "Krill Yourself was originally created as a 3D Game Programming Project
     at SDSU by Cameron Cobb, Erica Lee, Giovanna Ehrig, Ian Gower, Jose Garcia, and
-    Liam Carter.
-
-
-    Art by ""
-
-    UI by ""
-
-    Gameplay by ""
-
-    Music by
-    ""
-
-'
+    Liam Carter.\n\nArt by \"Bruno Mars\"\nUI by \"Gio Ehrig\"\nGameplay by \"Erica
+    Lee and Ian Gower\"\nLevel and Map Design by \"Liam Carter\"\nAnimations by \"Cameron
+    Cobb\" \nMusic by \"The Weeknd\"\nSounds by \"Jose Garcia\"\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
