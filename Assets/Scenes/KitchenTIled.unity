@@ -700,21 +700,21 @@ Light:
   m_GameObject: {fileID: 131428317}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 1
+  m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 15
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
-  m_CookieSize: 20
+  m_CookieSize: 49.29
   m_Shadows:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0
     m_Bias: 0.05
-    m_NormalBias: 0.4
+    m_NormalBias: 0.28
     m_NearPlane: 0.2
     m_CullingMatrixOverride:
       e00: 1
@@ -742,7 +742,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -1400,8 +1400,8 @@ MonoBehaviour:
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
-  isDoorOpen: 0
   animationClip: {fileID: 0}
+  isDoorOpen: 0
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
   idleColor: {r: 1, g: 1, b: 1, a: 1}
@@ -7388,21 +7388,21 @@ Light:
   m_GameObject: {fileID: 405819866}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 1
+  m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.23
   m_Range: 15
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
-  m_CookieSize: 20
+  m_CookieSize: 49.29
   m_Shadows:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0
     m_Bias: 0.05
-    m_NormalBias: 0.4
+    m_NormalBias: 0.28
     m_NearPlane: 0.2
     m_CullingMatrixOverride:
       e00: 1
@@ -7425,12 +7425,12 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -8297,8 +8297,8 @@ MonoBehaviour:
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
-  isDoorOpen: 0
   animationClip: {fileID: 0}
+  isDoorOpen: 0
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
   idleColor: {r: 1, g: 1, b: 1, a: 1}
@@ -9018,7 +9018,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 654778323}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.052249726, y: 1.4839865e-17, z: 2.1762609e-17, w: 0.9986341}
+  m_LocalRotation: {x: 0.052249745, y: 0, z: 0, w: 0.9986341}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9903,8 +9903,8 @@ MonoBehaviour:
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
-  isDoorOpen: 0
   animationClip: {fileID: 0}
+  isDoorOpen: 0
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
   idleColor: {r: 1, g: 1, b: 1, a: 1}
@@ -10074,8 +10074,8 @@ MonoBehaviour:
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
-  isDoorOpen: 0
   animationClip: {fileID: 0}
+  isDoorOpen: 0
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
   idleColor: {r: 1, g: 1, b: 1, a: 1}
@@ -10258,8 +10258,8 @@ MonoBehaviour:
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
-  isDoorOpen: 0
   animationClip: {fileID: 0}
+  isDoorOpen: 0
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
   idleColor: {r: 1, g: 1, b: 1, a: 1}
@@ -12337,8 +12337,8 @@ MonoBehaviour:
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
-  isDoorOpen: 0
   animationClip: {fileID: 0}
+  isDoorOpen: 0
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
   idleColor: {r: 1, g: 1, b: 1, a: 1}
@@ -13175,7 +13175,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1214546459}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.034124464, y: -5.1890204e-15, z: 1.2683385e-16, w: 0.9994176}
+  m_LocalRotation: {x: 0.034124468, y: 0, z: 0, w: 0.9994176}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -14879,7 +14879,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 592705374249410987, guid: ea8d8015153ce064cbdaa9932bf81a04, type: 3}
+  - {fileID: 2100000, guid: 072c4f92a1f3b3a42878846cda16187c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15490,8 +15490,8 @@ MonoBehaviour:
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
-  isDoorOpen: 0
   animationClip: {fileID: 0}
+  isDoorOpen: 0
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
   idleColor: {r: 1, g: 1, b: 1, a: 1}
@@ -15990,21 +15990,21 @@ Light:
   m_GameObject: {fileID: 1613270479}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 1
+  m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.23
   m_Range: 15
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
-  m_CookieSize: 20
+  m_CookieSize: 49.29
   m_Shadows:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0
     m_Bias: 0.05
-    m_NormalBias: 0.4
+    m_NormalBias: 0.28
     m_NearPlane: 0.2
     m_CullingMatrixOverride:
       e00: 1
@@ -16027,12 +16027,12 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -16103,8 +16103,8 @@ MonoBehaviour:
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
-  isDoorOpen: 0
   animationClip: {fileID: 0}
+  isDoorOpen: 0
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
   idleColor: {r: 1, g: 1, b: 1, a: 1}
@@ -16344,8 +16344,8 @@ MonoBehaviour:
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
-  isDoorOpen: 0
   animationClip: {fileID: 0}
+  isDoorOpen: 0
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
   idleColor: {r: 1, g: 1, b: 1, a: 1}
@@ -17212,8 +17212,8 @@ MonoBehaviour:
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
-  isDoorOpen: 0
   animationClip: {fileID: 0}
+  isDoorOpen: 0
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
   idleColor: {r: 1, g: 1, b: 1, a: 1}
@@ -17660,8 +17660,8 @@ MonoBehaviour:
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
-  isDoorOpen: 0
   animationClip: {fileID: 0}
+  isDoorOpen: 0
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
   idleColor: {r: 1, g: 1, b: 1, a: 1}
@@ -18491,8 +18491,8 @@ MonoBehaviour:
   chef: {fileID: 3141613144764604248}
   isPlayerNear: 0
   currentlyCooking: 0
-  isDoorOpen: 0
   animationClip: {fileID: 0}
+  isDoorOpen: 0
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
   idleColor: {r: 1, g: 1, b: 1, a: 1}
@@ -18935,21 +18935,21 @@ Light:
   m_GameObject: {fileID: 2033483254}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 1
+  m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.23
   m_Range: 15
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
-  m_CookieSize: 20
+  m_CookieSize: 49.29
   m_Shadows:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0
     m_Bias: 0.05
-    m_NormalBias: 0.4
+    m_NormalBias: 0.28
     m_NearPlane: 0.2
     m_CullingMatrixOverride:
       e00: 1
@@ -18972,12 +18972,12 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
