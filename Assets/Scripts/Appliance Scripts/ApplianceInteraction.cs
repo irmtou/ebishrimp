@@ -12,9 +12,8 @@ public class ApplianceInteraction : MonoBehaviour
     [SerializeField] private CookingAppliance chef;  // the chef shall decide the cooking functions :)
     public bool isPlayerNear = false;       // To track if the player is near the mixer
     public bool currentlyCooking = false;   // tracks whether or not the appliance is busy cooking
-    
-    public bool isDoorOpen = false;
     public AnimationClip animationClip;
+    public bool isDoorOpen;
     private float cookTime;
     public Renderer applianceRenderer;
     public Color cookingColor = Color.red; // Color while cooking
@@ -76,13 +75,6 @@ public class ApplianceInteraction : MonoBehaviour
 
     private IEnumerator CookDaShrimp()
     {
-        // Open the door if it is not already open
-        if (!isDoorOpen)
-        {
-            yield return StartCoroutine(OpenDoor());
-        }
-        // Close the door after cooking
-        yield return StartCoroutine(CloseDoor());
         // Update the material color to show cooking state
         if (applianceRenderer != null)
         {
