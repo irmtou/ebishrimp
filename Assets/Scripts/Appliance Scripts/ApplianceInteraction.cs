@@ -37,6 +37,12 @@ public class ApplianceInteraction : MonoBehaviour
         {
             applianceRenderer.material.color = idleColor;
         }
+
+        if (chef == null)
+        {
+            chef = GetComponent<CookingAppliance>();
+        }
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -75,6 +81,7 @@ public class ApplianceInteraction : MonoBehaviour
 
     private IEnumerator CookDaShrimp()
     {
+        currentlyCooking = true;
         // Update the material color to show cooking state
         if (applianceRenderer != null)
         {
@@ -115,6 +122,7 @@ public class ApplianceInteraction : MonoBehaviour
         }
 
         Debug.Log($"Cooking completed for {gameObject.name}");
+        currentlyCooking = false;
     }
 
 

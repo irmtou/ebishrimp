@@ -12,17 +12,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject optionsView; // the empty game object associated with "options screen"
     public AudioSource audioSource;
     public AudioClip sound;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     /* Methods that are called by elements of the UI */
     public void StartGame()
     {

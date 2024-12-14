@@ -1441,21 +1441,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: 'Krill Yourself was originally created as a 3D Game Programming Project
-    at SDSU by Cameron Cobb, Erica Lee, Giovanna Ehrig, Ian Gower, Jose Garcia, and
-    Liam Carter.
+    at SDSU by Erica Lee, Giovanna Ehrig, Ian Gower, Jose Garcia, and Liam Carter.
 
 
-    UI by Gio Ehrig
+    UI
+    by Gio Ehrig
 
     Gameplay by Erica Lee and Ian Gower
 
-    Sounds
-    by Jose Garcia
+    Sounds by Jose Garcia
 
-    Animations by Cameron Cobb
-
-    Map and Level Design by Liam
-    Carter
+    Map
+    and Level Design by Liam Carter
 
 '
   m_isRightToLeft: 0
