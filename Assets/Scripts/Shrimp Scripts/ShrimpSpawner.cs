@@ -52,7 +52,6 @@ public class FridgeSpawner : MonoBehaviour
 
             audioManager.PlaySound(sound);
 
-
             // Wait for the remaining part of the animation (door closing)
             yield return new WaitForSeconds(animationDuration);
         }

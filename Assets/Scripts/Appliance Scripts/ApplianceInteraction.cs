@@ -5,19 +5,27 @@ using UnityEngine;
 
 public class ApplianceInteraction : MonoBehaviour
 {
-    public Animator animator;              // Reference to the Animator
+
+    [Header("Sounds")]
     public AudioManager audioManager;
     public AudioClip sound;
-    public int shrimpCount = 3;             // the amount of shrimp that can go into the mixer
+
+    [Header("Gameplay Variables")]
     [SerializeField] private CookingAppliance chef;  // the chef shall decide the cooking functions :)
+    public int shrimpCount = 3;             // the amount of shrimp that can go into the mixer
+    private float cookTime;
     public bool isPlayerNear = false;       // To track if the player is near the mixer
     public bool currentlyCooking = false;   // tracks whether or not the appliance is busy cooking
+
+    [Header("Appearance")]
+    public Animator animator;              // Reference to the Animator
     public AnimationClip animationClip;
-    public bool isDoorOpen;
-    private float cookTime;
     public Renderer applianceRenderer;
     public Color cookingColor = Color.red; // Color while cooking
     public Color idleColor = Color.white;  // Color when idle
+
+    [Header("Not Yet Used")]
+    public bool isDoorOpen; // if you implement opening functionality
     
      private void Start()
     {

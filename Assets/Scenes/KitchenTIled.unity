@@ -1326,18 +1326,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
   audioManager: {fileID: 0}
   sound: {fileID: 0}
-  shrimpCount: 3
   chef: {fileID: 200355160}
+  shrimpCount: 3
   isPlayerNear: 0
   currentlyCooking: 0
+  animator: {fileID: 0}
   animationClip: {fileID: 0}
-  isDoorOpen: 0
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
   idleColor: {r: 1, g: 1, b: 1, a: 1}
+  isDoorOpen: 0
 --- !u!114 &200355160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7484,85 +7484,6 @@ Transform:
   - {fileID: 405819868}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &415913917
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 415913918}
-  - component: {fileID: 415913920}
-  - component: {fileID: 415913919}
-  m_Layer: 5
-  m_Name: Label
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &415913918
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 415913917}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.8, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 541800813}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 9, y: -0.5}
-  m_SizeDelta: {x: -28, y: -3}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &415913919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 415913917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.49056602, g: 0.14732406, b: 0.25903574, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 4beb055f07aaff244873dec698d0363e, type: 3}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Sound Effects
---- !u!222 &415913920
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 415913917}
-  m_CullTransparentMesh: 1
 --- !u!1 &425947540
 GameObject:
   m_ObjectHideFlags: 0
@@ -8445,18 +8366,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
   audioManager: {fileID: 653840507}
   sound: {fileID: 8300000, guid: f5aeadc40f699264785afd6ac7a7a4ee, type: 3}
-  shrimpCount: 3
   chef: {fileID: 525239427}
+  shrimpCount: 3
   isPlayerNear: 0
   currentlyCooking: 0
+  animator: {fileID: 0}
   animationClip: {fileID: 0}
-  isDoorOpen: 0
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
   idleColor: {r: 1, g: 1, b: 1, a: 1}
+  isDoorOpen: 0
 --- !u!114 &525239427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8497,7 +8418,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &541800813
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8511,13 +8432,12 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1849917346}
-  - {fileID: 415913918}
   - {fileID: 1009667337}
   m_Father: {fileID: 201899619}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 800, y: -350}
+  m_AnchoredPosition: {x: 300, y: -390}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &541800814
@@ -8579,7 +8499,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &552158241 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2461224206544761026, guid: 8d468adc2cff63f42b13ce4caf03c1d7, type: 3}
@@ -9378,6 +9298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   creditsView: {fileID: 0}
   optionsView: {fileID: 0}
+  titleView: {fileID: 0}
   audioSource: {fileID: 653840509}
   sound: {fileID: 8300000, guid: 90736782c2ed1614f8c9bd114b7c1030, type: 3}
 --- !u!82 &653840509 stripped
@@ -10403,18 +10324,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
   audioManager: {fileID: 653840507}
   sound: {fileID: 8300000, guid: f5aeadc40f699264785afd6ac7a7a4ee, type: 3}
-  shrimpCount: 3
   chef: {fileID: 853362537}
+  shrimpCount: 3
   isPlayerNear: 0
   currentlyCooking: 0
+  animator: {fileID: 0}
   animationClip: {fileID: 0}
-  isDoorOpen: 0
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
   idleColor: {r: 1, g: 1, b: 1, a: 1}
+  isDoorOpen: 0
 --- !u!114 &853362537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10593,23 +10514,23 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 552158241}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
   audioManager: {fileID: 0}
   sound: {fileID: 0}
-  shrimpCount: 3
   chef: {fileID: 3141613144764604248}
+  shrimpCount: 3
   isPlayerNear: 0
   currentlyCooking: 0
+  animator: {fileID: 0}
   animationClip: {fileID: 0}
-  isDoorOpen: 0
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
   idleColor: {r: 1, g: 1, b: 1, a: 1}
+  isDoorOpen: 0
 --- !u!1001 &866902967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10785,18 +10706,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 866902973}
   audioManager: {fileID: 653840507}
   sound: {fileID: 8300000, guid: 8d6b8bc36a7d47a4094d1bd67ae45bf9, type: 3}
-  shrimpCount: 5
   chef: {fileID: 866902976}
+  shrimpCount: 5
   isPlayerNear: 0
   currentlyCooking: 0
+  animator: {fileID: 866902973}
   animationClip: {fileID: 0}
-  isDoorOpen: 0
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
   idleColor: {r: 1, g: 1, b: 1, a: 1}
+  isDoorOpen: 0
 --- !u!65 &866902975
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11636,13 +11557,12 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1729622919}
-  - {fileID: 1797647837}
   - {fileID: 1786180968}
   m_Father: {fileID: 201899619}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 300, y: -350}
+  m_AnchoredPosition: {x: 300, y: -300}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &974647248
@@ -11704,7 +11624,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 1
+      - m_Target: {fileID: 653840509}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: set_mute
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_IsOn: 0
 --- !u!1 &1009667336
 GameObject:
   m_ObjectHideFlags: 0
@@ -11762,7 +11694,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Music
+  m_text: Mute Music
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -12835,18 +12767,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
   audioManager: {fileID: 653840507}
   sound: {fileID: 8300000, guid: aae61674c616a8b48ba329063df057e1, type: 3}
-  shrimpCount: 1
   chef: {fileID: 1114992855}
+  shrimpCount: 1
   isPlayerNear: 0
   currentlyCooking: 0
+  animator: {fileID: 0}
   animationClip: {fileID: 0}
-  isDoorOpen: 0
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
   idleColor: {r: 1, g: 1, b: 1, a: 1}
+  isDoorOpen: 0
 --- !u!114 &1114992855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16429,18 +16361,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1459638437}
   audioManager: {fileID: 653840507}
   sound: {fileID: 8300000, guid: 8d6b8bc36a7d47a4094d1bd67ae45bf9, type: 3}
-  shrimpCount: 5
   chef: {fileID: 1459638438}
+  shrimpCount: 5
   isPlayerNear: 0
   currentlyCooking: 0
+  animator: {fileID: 1459638437}
   animationClip: {fileID: 0}
-  isDoorOpen: 0
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
   idleColor: {r: 1, g: 1, b: 1, a: 1}
+  isDoorOpen: 0
 --- !u!95 &1459638437
 Animator:
   serializedVersion: 5
@@ -17013,18 +16945,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
   audioManager: {fileID: 653840507}
   sound: {fileID: 8300000, guid: 773eac37d6253cf438950478311edcf1, type: 3}
-  shrimpCount: 3
   chef: {fileID: 1614707686}
+  shrimpCount: 3
   isPlayerNear: 0
   currentlyCooking: 0
+  animator: {fileID: 0}
   animationClip: {fileID: 0}
-  isDoorOpen: 0
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
   idleColor: {r: 1, g: 1, b: 1, a: 1}
+  isDoorOpen: 0
 --- !u!114 &1614707686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17883,7 +17815,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sound Effects
+  m_text: Mute Sound Effects
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -17960,85 +17892,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786180967}
   m_CullTransparentMesh: 1
---- !u!1 &1797647836
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1797647837}
-  - component: {fileID: 1797647839}
-  - component: {fileID: 1797647838}
-  m_Layer: 5
-  m_Name: Label
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1797647837
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1797647836}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.8, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 974647247}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 9, y: -0.5}
-  m_SizeDelta: {x: -28, y: -3}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1797647838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1797647836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.49056602, g: 0.14732406, b: 0.25903574, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 4beb055f07aaff244873dec698d0363e, type: 3}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Sound Effects
---- !u!222 &1797647839
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1797647836}
-  m_CullTransparentMesh: 1
 --- !u!1 &1823946039 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1048367462581851420, guid: 60d8bc2b8b69961468eef2b1cf70334a, type: 3}
@@ -18091,18 +17944,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1823946050}
   audioManager: {fileID: 653840507}
   sound: {fileID: 8300000, guid: f5aeadc40f699264785afd6ac7a7a4ee, type: 3}
-  shrimpCount: 3
   chef: {fileID: 1823946051}
+  shrimpCount: 3
   isPlayerNear: 0
   currentlyCooking: 0
+  animator: {fileID: 1823946050}
   animationClip: {fileID: 0}
-  isDoorOpen: 0
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
   idleColor: {r: 1, g: 1, b: 1, a: 1}
+  isDoorOpen: 0
 --- !u!114 &1823946049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18563,18 +18416,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
   audioManager: {fileID: 653840507}
   sound: {fileID: 8300000, guid: aae61674c616a8b48ba329063df057e1, type: 3}
-  shrimpCount: 1
   chef: {fileID: 1911181061}
+  shrimpCount: 1
   isPlayerNear: 0
   currentlyCooking: 0
+  animator: {fileID: 0}
   animationClip: {fileID: 0}
-  isDoorOpen: 0
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
   idleColor: {r: 1, g: 1, b: 1, a: 1}
+  isDoorOpen: 0
 --- !u!114 &1911181061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19418,18 +19271,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3c8f16b5bb0dd42882939118a9953c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1984985054}
   audioManager: {fileID: 653840507}
   sound: {fileID: 8300000, guid: 8d6b8bc36a7d47a4094d1bd67ae45bf9, type: 3}
-  shrimpCount: 5
   chef: {fileID: 1984985055}
+  shrimpCount: 5
   isPlayerNear: 0
   currentlyCooking: 0
+  animator: {fileID: 1984985054}
   animationClip: {fileID: 0}
-  isDoorOpen: 0
   applianceRenderer: {fileID: 0}
   cookingColor: {r: 1, g: 0, b: 0, a: 1}
   idleColor: {r: 1, g: 1, b: 1, a: 1}
+  isDoorOpen: 0
 --- !u!95 &1984985054
 Animator:
   serializedVersion: 5
@@ -19662,6 +19515,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   creditsView: {fileID: 1147845364}
   optionsView: {fileID: 201899618}
+  titleView: {fileID: 0}
   audioSource: {fileID: 0}
   sound: {fileID: 0}
 --- !u!114 &2015266753
@@ -20968,8 +20822,8 @@ SceneRoots:
   - {fileID: 390370524}
   - {fileID: 392766797}
   - {fileID: 1175123564}
-  - {fileID: 1942023107}
   - {fileID: 1198539055}
+  - {fileID: 1942023107}
   - {fileID: 707095814}
   - {fileID: 12547563}
   - {fileID: 698865846}

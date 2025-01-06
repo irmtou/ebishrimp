@@ -7,13 +7,9 @@ public class GameManager : MonoBehaviour
     // GameManager.Instance.(whatever method you'd like to access)
 
     public static GameManager Instance { get; private set; }
-
     public int cookedShrimpCount{ get; private set;}
-
     public float time{ get; private set;}
-
     public bool ticking;
-
     public int shrimpCount{ get; private set;}
    
 
@@ -29,6 +25,7 @@ public class GameManager : MonoBehaviour
                 ticking = false;
             }
         }
+
     }
 
     public void Pause()
