@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject creditsView; // the empty game object associated with "credits screen"
     [SerializeField] private GameObject optionsView; // the empty game object associated with "options screen"
     [SerializeField] private GameObject titleView; // the empty game object associated with "title screen"
+    [SerializeField] private GameObject difficultyView; // the empty game object associated with "difficulty screen"
     [Header("Audio")]
     public AudioSource audioSource;
     public AudioClip sound;
@@ -80,6 +81,20 @@ public class UIManager : MonoBehaviour
                 creditsView.SetActive(false);
             }
             GameManager.Instance.Pause();
+        }
+    }
+    
+    public void ToggleDifficultyScreen()
+    {
+        // shows the credits if its not shown, or disables them otherwise
+        if (difficultyView.activeSelf == true)
+        {
+            difficultyView.SetActive(false);
+            optionsView.SetActive(true); 
+        } else 
+        {
+            difficultyView.SetActive(true);
+            optionsView.SetActive(false); // disable options so the buttons aren't accidentally triggered
         }
     }
 

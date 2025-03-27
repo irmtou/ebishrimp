@@ -98,6 +98,7 @@ public class CookingAppliance : MonoBehaviour {
             yield return null;
         }
         // delete srimp
+        GameManager.Instance.time += 0.1f; // krillin a shrimp adds 0.1 seconds to your time
         srimps.Remove(srimp1);
     }
 
@@ -108,13 +109,15 @@ public class CookingAppliance : MonoBehaviour {
         while (shrimpInAppliance.Count > 0) {
             // Get the next shrimp to cook
             GameObject shrimp = shrimpInAppliance.Dequeue();
-
+            
             Debug.Log("Cooking shrimp...");
             yield return new WaitForSeconds(cookingTimePerShrimp); // Simulate cooking time
 
             // Shrimp is cooked
             Destroy(shrimp); // Remove shrimp from the game
             shrimpManager.IncrementCookedShrimpCount(1); // Update the global cooked shrimp count
+            
+            
 
             Debug.Log("Shrimp cooked!");
         }

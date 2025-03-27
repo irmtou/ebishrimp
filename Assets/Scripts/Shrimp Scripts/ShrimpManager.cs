@@ -12,7 +12,7 @@ public class ShrimpManager : MonoBehaviour {
             {
                 GameManager.Instance.changeShrimpCount(shrimpTroupe.Count);
             }
-            Debug.Log($"Shrimp added. Troupe size: {shrimpTroupe.Count}");
+            // Debug.Log($"Shrimp added. Troupe size: {shrimpTroupe.Count}");
         }
     }
 
@@ -23,7 +23,7 @@ public class ShrimpManager : MonoBehaviour {
             {
                 GameManager.Instance.changeShrimpCount(shrimpTroupe.Count);
             }
-            Debug.Log($"Shrimp removed. Troupe size: {shrimpTroupe.Count}");
+            // Debug.Log($"Shrimp removed. Troupe size: {shrimpTroupe.Count}");
         }
     }
 
@@ -33,6 +33,6 @@ public class ShrimpManager : MonoBehaviour {
         {
             GameManager.Instance.changeCookedShrimpCount(totalCookedShrimp);
         }
-        Debug.Log($"Total Cooked Shrimp: {totalCookedShrimp}");
+        // Debug.Log($"Total Cooked Shrimp: {totalCookedShrimp}");
     }
 }

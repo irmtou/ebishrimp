@@ -8,21 +8,27 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance { get; private set; }
     public int cookedShrimpCount{ get; private set;}
-    public float time{ get; private set;}
+    public float time;
     public bool ticking;
     public int shrimpCount{ get; private set;}
+    public int difficulty; // an int that controls the settings of everything to adjust difficulty
+    public int score; // holds the current score of the player
+    public int highScore = 0; // variable to store the high score
+    private const string HIGH_SCORE_KEY = "highScore"; // Key for PlayerPrefs
    
 
     void FixedUpdate()
     {
         if(ticking)
         {
-            
+            score = (int) (cookedShrimpCount*time);
             time = time - Time.deltaTime;
             if(time<=0f)
             {
+                UpdateHighScore(score); // update hs if you lose 
                 GameOver();
                 ticking = false;
+                
             }
         }
 
@@ -50,6 +56,7 @@ public class GameManager : MonoBehaviour
         //Else this is the new instance
         else{
             Instance = this;
+            highScore = PlayerPrefs.GetInt(HIGH_SCORE_KEY, 0);
             DontDestroyOnLoad(gameObject);
         }
     }
@@ -64,11 +71,13 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-       ResetGame(); //Moved all of these functions to reset game so we would have a callable reset function
+        difficulty = 2;
+        ResetGame(); // Moved all of these functions to reset game so we would have a callable reset function
     }
 
     public void ResetGame()
     {
+
         Application.targetFrameRate = 60; //We can change this
         ticking  = false;
         shrimpCount = 1;
@@ -78,6 +87,7 @@ public class GameManager : MonoBehaviour
 
     public void NewGame()
     {
+        score = 0;
         cookedShrimpCount = 0;
         ticking  = true;
         LoadLevel("KitchenTIled");
@@ -91,21 +101,24 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        
         SceneManager.LoadScene("Crustacean Devastation");      // Game Over Screen (Loss)
     }
 
     private void WinScreen()
     {
+        
         SceneManager.LoadScene("KrilledIt");     // Game Over Screen (Win)
     }
 
-    //sets shrimp count
+    // sets shrimp count
     public void changeShrimpCount(int change)
     {
         shrimpCount = change;
         if (shrimpCount<=0)
         {
             //end game if so
+            UpdateHighScore(score); // update hs if you win
             ticking = false;
             new WaitForSeconds(2f);
             WinScreen();
@@ -114,6 +127,18 @@ public class GameManager : MonoBehaviour
     public void changeCookedShrimpCount(int change)
     {
         cookedShrimpCount = change;
+    }
+
+    // Call this method when the player's score is updated
+    public void UpdateHighScore(int currentScore)
+    {
+        if (currentScore > highScore)
+        {
+            highScore = currentScore;
+            // Save the new high score to PlayerPrefs
+            PlayerPrefs.SetInt(HIGH_SCORE_KEY, highScore);
+            PlayerPrefs.Save(); // Ensure immediate saving
+        }
     }
 
 
